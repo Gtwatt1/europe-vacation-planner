@@ -192,7 +192,7 @@ const travelCalendar={
 "2026-12-06":{mode:"✈️ Flight",destination:"Toronto"}
 };
 function travelIcon(travel){return travel.dayTrip?'🔁':travel.mode.includes('✈️')?'✈️':'🚆'}
-function dayFlag(key,city){if(/Antwerp/i.test(city))return "🇧🇪";if(/Amsterdam/i.test(city))return "🇳🇱";if(/Paris|Strasbourg|Versailles/i.test(city))return "🇫🇷";if(/London|Newcastle/i.test(city))return "🇬🇧";return "🇨🇦"}
+function dayFlag(key,city){if(key==="2026-11-21")return "🇨🇦";if(/Antwerp/i.test(city))return "🇧🇪";if(/Amsterdam/i.test(city))return "🇳🇱";if(/Paris|Strasbourg|Versailles/i.test(city))return "🇫🇷";if(/London|Newcastle/i.test(city))return "🇬🇧";return "🇨🇦"}
 function drawWholeCalendar(){
  const root=document.getElementById('whole-trip');root.innerHTML='';
  weekday.forEach(w=>{const el=document.createElement('div');el.className='week';el.textContent=w;root.appendChild(el)});
