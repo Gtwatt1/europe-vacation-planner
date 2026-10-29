@@ -142,7 +142,7 @@
 </style><style>
 /* Avoid Safari/Chrome lazy-loading deadlock: render photos in layout while fetching. */
 .journey-media{position:relative;overflow:hidden}
-.journey-media .journey-photo{display:block!important;position:absolute;inset:0;width:100%;height:100%;min-height:0!important;object-fit:cover;opacity:0;transition:opacity .18s ease}
+.journey-media .journey-photo{display:block!important;position:absolute;inset:0;width:100%;height:100%;min-height:0!important;object-fit:cover;opacity:1;z-index:1;transition:opacity .18s ease}
 .journey-media .journey-placeholder{position:relative;min-height:205px}
 @media(max-width:600px){.journey-media .journey-placeholder{min-height:160px}}
 </style></head>
@@ -342,7 +342,7 @@ function drawTasks(){
   const media=document.createElement('div');media.className='journey-media';
   const placeholder=document.createElement('div');placeholder.className='journey-placeholder';placeholder.textContent=article||'Your travel day';
   const image=document.createElement('img');image.className='journey-photo';image.loading='eager';image.decoding='async';image.alt=article?'Photo of '+article:'';
-  image.style.opacity='0';media.append(placeholder,image);findRealPhoto(article||fallbackArticle(dateKey),image,placeholder,dateKey,i);
+  image.style.opacity='1';media.append(placeholder,image);findRealPhoto(article||fallbackArticle(dateKey),image,placeholder,dateKey,i);
   const content=document.createElement('div');content.className='journey-copy';
   const num=document.createElement('span');num.className='journey-number';num.textContent=String(i+1).padStart(2,'0');
   const when=document.createElement('div');when.className='journey-time';when.textContent=time;
