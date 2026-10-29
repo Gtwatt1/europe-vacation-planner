@@ -3,6 +3,8 @@ on:
   push:
     paths:
       - ".github/workflows/browser-image-diagnostics.yml"
+      - "index.html"
+      - "tests/browser_diagnostics.py"
   workflow_dispatch:
 permissions:
   contents: write
@@ -16,7 +18,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install playwright
-      - run: python -m playwright install chromium --with-deps
+      - run: python -m playwright install chromium webkit --with-deps
       - name: Test deployed mobile and desktop page
         run: python tests/browser_diagnostics.py
       - name: Commit diagnostic results
