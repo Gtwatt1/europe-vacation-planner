@@ -39,7 +39,37 @@
 .transport-time{font-size:10px;line-height:1.4;color:white}
 .country-flag{font-size:17px;vertical-align:middle;margin-left:4px;text-shadow:none}
 @media(max-width:680px){.cell.trip.transport-day{gap:3px;padding:4px}.transport-mode{font-size:8px;padding:3px 4px}.transport-flags{font-size:12px}.transport-cities{font-size:9px}.transport-time{display:none}.country-flag{font-size:14px;margin-left:2px}}
- .transport-destination{font-size:12px;font-weight:800;color:white;line-height:1.35;overflow-wrap:anywhere}@media(max-width:680px){.transport-destination{font-size:10px}} </style></head>
+ .transport-destination{font-size:12px;font-weight:800;color:white;line-height:1.35;overflow-wrap:anywhere}@media(max-width:680px){.transport-destination{font-size:10px}} </style><style>
+/* Mobile itinerary: readable photo cards rather than seven tiny columns */
+@media(max-width:680px){
+ .hero{min-height:205px}.hero-inner{padding:25px 20px 30px}.hero h1{font-size:38px;line-height:1.08}
+ .hero-meta{gap:7px}.hero-meta span{font-size:10px;padding:6px 9px}
+ .shell{padding:0 12px;margin:0 auto 35px}
+ .section-head{display:block;margin:23px 2px 14px}
+ .section-head h2{font-size:27px}.section-head p{margin-top:7px;font-size:12px}
+ .calendar{padding:0;border:0;background:transparent;box-shadow:none}
+ .days{display:flex!important;flex-direction:column;gap:12px!important}
+ .days .week,.days .cell.empty{display:none!important}
+ .days .cell.trip{min-height:132px!important;width:100%;border-radius:17px;padding:15px 18px!important;gap:6px!important;background-size:cover;background-position:center;box-shadow:0 5px 16px #122c3620;justify-content:center;align-items:flex-start;text-align:left}
+ .days .cell.trip .day-num{font-size:13px!important;line-height:1.3;color:#fff!important}
+ .days .cell.trip .country-flag{font-size:17px!important;margin-left:5px}
+ .days .cell.trip .city,.days .cell.trip .transport-destination{font-size:22px!important;line-height:1.15;font-weight:800;color:white}
+ .days .cell.trip .detail,.days .cell.trip .transport-time{display:block!important;font-size:12px!important;line-height:1.4;color:#f2f8f8;max-width:95%}
+ .days .cell.trip .transport-mode{font-size:11px!important;padding:5px 9px}
+ .days .cell.trip.transport-day{border:1px solid #a9e4d2!important}
+ .modal-backdrop{padding:0;align-items:stretch}
+ .modal{height:100dvh;max-height:100dvh;width:100%;border-radius:0}
+ .modal-img{height:175px}
+ .modal-body{padding:20px 17px 30px}
+ .modal h2{font-size:29px;line-height:1.15;overflow-wrap:anywhere}
+ .journey-intro{margin:23px 0 15px}
+ .journey-intro h3{font-size:27px}
+ .journey-flow{padding-left:17px}
+ .journey-stop{grid-template-columns:1fr}
+ .journey-photo,.journey-media{height:185px;min-height:185px}
+ .journey-copy h4{font-size:16px}
+}
+</style></head>
 <body><header class="hero"><div class="hero-inner"><div class="eyebrow">Our winter escape · 2026</div><h1>Our European escape.</h1><p>Tap any day to explore the full itinerary, timings, helpful links and notes.</p><div class="hero-meta"><span>21 Nov – 6 Dec 2026</span><span>Amsterdam · Paris · London · Newcastle</span></div></div></header>
 <main class="shell"><section id="calendar-view"><div class="section-head"><h2>November → December 2026</h2><p>Tap any date to see the plan for the day</p></div><div class="calendar"><div id="whole-trip" class="days"></div></div><p class="footnote">Times are local to each destination. Tap a date to view activities and add notes.</p></section></main>
 <footer class="foot">Tap a day for details · Saved notes stay on this device.</footer>
