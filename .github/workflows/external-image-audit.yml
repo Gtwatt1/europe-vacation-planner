@@ -1,0 +1,34 @@
+name: Test remote travel images without changing website
+on:
+  push:
+    paths:
+      - ".github/workflows/external-image-audit.yml"
+      - "tests/external_image_audit.py"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  remote-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install playwright
+      - run: python -m playwright install chromium webkit --with-deps
+      - name: Test Wikimedia and original Unsplash in real browsers
+        run: python tests/external_image_audit.py
+      - name: Save results to repository
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if test -f test-results/external-image-audit.json; then
+            git add test-results/external-image-audit.json test-results/external-image-candidates.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Record external image compatibility audit"
+              git push
+            fi
+          fi
