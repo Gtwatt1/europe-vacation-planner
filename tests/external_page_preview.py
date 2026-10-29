@@ -10,7 +10,14 @@ async def check_browser(p,label,engine,mobile):
     page=await browser.new_page(viewport={"width":390 if mobile else 1280,"height":844 if mobile else 800},is_mobile=mobile,has_touch=mobile)
     errors=[]
     page.on("pageerror",lambda e:errors.append(str(e)))
-    response=await page.goto(URL,wait_until="domcontentloaded",timeout=45000)
+    response=None
+    ready=False
+    for attempt in range(16):
+      response=await page.goto(URL+"&attempt="+str(attempt),wait_until="domcontentloaded",timeout=45000)
+      if "const useExternalPreview=" in await page.content():
+        ready=True;break
+      await page.wait_for_timeout(4000)
+    if not ready:raise RuntimeError("External-preview version is not live")
     await page.wait_for_selector(".days .cell.trip",timeout=20000)
     await page.wait_for_function("""()=>[...document.querySelectorAll('.cell.trip')]
       .every(el=>getComputedStyle(el).backgroundImage.includes('wikimedia.org'))""",timeout=40000)
