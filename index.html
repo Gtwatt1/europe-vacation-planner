@@ -187,13 +187,58 @@ async function findRealPhoto(title,img,placeholder,key){
  probe.onload=()=>{if(img.isConnected){img.src=result.src;img.alt="Photo of "+result.article}};
  probe.src=result.src;
 }
+const calendarPhotoFiles={
+"2026-11-21":"Amsterdam Canal view 01.jpg",
+"2026-11-22":"Amsterdam, canal, 2012.JPG",
+"2026-11-23":"Amsterdam Canal 5.jpg",
+"2026-11-24":"Antwerpen Grote Markt.jpg",
+"2026-11-25":"Amsterdam Canal 2.jpg",
+"2026-11-26":null,
+"2026-11-27":null,
+"2026-11-28":null,
+"2026-11-29":null,
+"2026-11-30":"Strasbourg, Petite France.jpg",
+"2026-12-01":"Tower-bridge-in-london.jpg",
+"2026-12-02":"Tower Bridge in London.JPG",
+"2026-12-03":"A view of Tower Bridge in London.jpg",
+"2026-12-04":"Newcastle upon Tyne - Tyne Bridge.jpg",
+"2026-12-05":"Newcastle upon Tyne - Tyne Bridge.jpg",
+"2026-12-06":"Tower-bridge-in-london.jpg"
+};
+const knownFallbacks={
+"2026-11-21":"2026-11-22","2026-11-23":"2026-11-22",
+"2026-11-24":"2026-11-22","2026-11-25":"2026-11-22",
+"2026-11-30":"2026-11-26","2026-12-04":"2026-12-02",
+"2026-12-05":"2026-12-02"
+};
+function loadFirstPhoto(urls,callback){
+ const list=[...new Set(urls.filter(Boolean))];
+ const attempt=i=>{
+  if(i>=list.length){callback(null);return}
+  const test=new Image();
+  test.onload=()=>callback(list[i]);
+  test.onerror=()=>attempt(i+1);
+  test.src=list[i];
+ };
+ attempt(0);
+}
+function calendarPhotoCandidates(key){
+ const file=calendarPhotoFiles[key];
+ return [file?commonsFileUrl(file):null,dayPhotos[key],dependableCityPhoto(key),onlinePhotos.paris];
+}
 async function setAccurateDayPhoto(key,element,isBackground=false){
- const d=trip[key],backup=dependableCityPhoto(key);
- if(isBackground){
-  element.style.backgroundImage='linear-gradient(180deg,rgba(11,29,42,.18),rgba(11,29,42,.83)),url("'+backup+'")';
-  return;
- }
- element.src=backup;element.style.display="block";element.alt=d.city+" travel photograph";
+ const candidates=calendarPhotoCandidates(key);
+ loadFirstPhoto(candidates,src=>{
+  if(!element.isConnected)return;
+  if(isBackground){
+   element.style.backgroundImage=src
+    ? 'linear-gradient(180deg,rgba(11,29,42,.18),rgba(11,29,42,.83)),url("'+src+'")'
+    : 'linear-gradient(135deg,#163c4b,#4d766d)';
+  }else{
+   if(src){element.src=src;element.style.display="block";element.alt=trip[key].city+" photograph"}
+   else element.style.display="none";
+  }
+ });
 }
 function drawTasks(){
  const day=trip[activeKey],dateKey=activeKey,list=day.items.concat((state.extra[dateKey]||[]).map(t=>['Your addition',t]));
