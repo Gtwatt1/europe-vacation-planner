@@ -1,0 +1,458 @@
+{
+  "mobile-webkit": {
+    "status": 200,
+    "days": 16,
+    "checks": [
+      {
+        "date": "2026-11-21",
+        "images": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Toronto_by_Sentinel-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Toronto_by_Sentinel-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/0/0d/London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Toronto_by_Sentinel-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+      },
+      {
+        "date": "2026-11-23",
+        "images": [
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/South_facade_of_the_Rijksmuseum_Amsterdam_%28DSCF0528%29.jpg/1280px-South_facade_of_the_Rijksmuseum_Amsterdam_%28DSCF0528%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Logo_-_Van_Gogh_Museum.png/1280px-Logo_-_Van_Gogh_Museum.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Eerste_Leliedwarsstraat.jpg/1280px-Eerste_Leliedwarsstraat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png/1280px-Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/South_facade_of_the_Rijksmuseum_Amsterdam_%28DSCF0528%29.jpg/1280px-South_facade_of_the_Rijksmuseum_Amsterdam_%28DSCF0528%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+      },
+      {
+        "date": "2026-11-24",
+        "images": [
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Amberes%3B_vistas_MAS_2.jpg/1280px-Amberes%3B_vistas_MAS_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Antwerpen_-_Station_Antwerpen-Centraal_%2811%29.jpg/1280px-Antwerpen_-_Station_Antwerpen-Centraal_%2811%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Grote_Markt_%28Antwerpen%29.jpg/1280px-Grote_Markt_%28Antwerpen%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Amberes%3B_vistas_MAS_2.jpg/1280px-Amberes%3B_vistas_MAS_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Amberes%3B_vistas_MAS_2.jpg/1280px-Amberes%3B_vistas_MAS_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+      },
+      {
+        "date": "2026-11-27",
+        "images": [
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1280px-Louvre_Museum_Wikimedia_Commons.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg/1280px-Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Le_sacre_coeur.jpg/1280px-Le_sacre_coeur.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1280px-Louvre_Museum_Wikimedia_Commons.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+      },
+      {
+        "date": "2026-12-03",
+        "images": [
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg/1280px-Tower_of_London_from_the_Shard_%288515883950%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/London-Eye-2009.JPG/1280px-London-Eye-2009.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Walkie-Talkie_-_Sept_2015_%28cropped%29.jpg/1280px-Walkie-Talkie_-_Sept_2015_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Tower_Bridge_at_Dawn.jpg/1280px-Tower_Bridge_at_Dawn.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Tower_Bridge_at_Dawn.jpg/1280px-Tower_Bridge_at_Dawn.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+      },
+      {
+        "date": "2026-12-06",
+        "images": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/0/0d/London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/0/0d/London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Toronto_by_Sentinel-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://upload.wikimedia.org/wikipedia/commons/0/0d/London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+      }
+    ],
+    "errors": [],
+    "totalActivities": 21,
+    "externalActivities": 21,
+    "failedActivities": [],
+    "externalModalPhotos": 6
+  },
+  "mobile-chromium": {
+    "status": 200,
+    "days": 16,
+    "checks": [
+      {
+        "date": "2026-11-21",
+        "images": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Toronto_by_Sentinel-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Toronto_by_Sentinel-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/0/0d/London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Toronto_by_Sentinel-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+      },
+      {
+        "date": "2026-11-23",
+        "images": [
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/South_facade_of_the_Rijksmuseum_Amsterdam_%28DSCF0528%29.jpg/1280px-South_facade_of_the_Rijksmuseum_Amsterdam_%28DSCF0528%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Logo_-_Van_Gogh_Museum.png/1280px-Logo_-_Van_Gogh_Museum.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Eerste_Leliedwarsstraat.jpg/1280px-Eerste_Leliedwarsstraat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png/1280px-Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/South_facade_of_the_Rijksmuseum_Amsterdam_%28DSCF0528%29.jpg/1280px-South_facade_of_the_Rijksmuseum_Amsterdam_%28DSCF0528%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+      },
+      {
+        "date": "2026-11-24",
+        "images": [
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Amberes%3B_vistas_MAS_2.jpg/1280px-Amberes%3B_vistas_MAS_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Antwerpen_-_Station_Antwerpen-Centraal_%2811%29.jpg/1280px-Antwerpen_-_Station_Antwerpen-Centraal_%2811%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Grote_Markt_%28Antwerpen%29.jpg/1280px-Grote_Markt_%28Antwerpen%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Amberes%3B_vistas_MAS_2.jpg/1280px-Amberes%3B_vistas_MAS_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Amberes%3B_vistas_MAS_2.jpg/1280px-Amberes%3B_vistas_MAS_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+      },
+      {
+        "date": "2026-11-27",
+        "images": [
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1280px-Louvre_Museum_Wikimedia_Commons.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg/1280px-Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Le_sacre_coeur.jpg/1280px-Le_sacre_coeur.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1280px-Louvre_Museum_Wikimedia_Commons.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+      },
+      {
+        "date": "2026-12-03",
+        "images": [
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg/1280px-Tower_of_London_from_the_Shard_%288515883950%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/London-Eye-2009.JPG/1280px-London-Eye-2009.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Walkie-Talkie_-_Sept_2015_%28cropped%29.jpg/1280px-Walkie-Talkie_-_Sept_2015_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Tower_Bridge_at_Dawn.jpg/1280px-Tower_Bridge_at_Dawn.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Tower_Bridge_at_Dawn.jpg/1280px-Tower_Bridge_at_Dawn.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+      },
+      {
+        "date": "2026-12-06",
+        "images": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/0/0d/London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/0/0d/London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Toronto_by_Sentinel-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://upload.wikimedia.org/wikipedia/commons/0/0d/London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+      }
+    ],
+    "errors": [],
+    "totalActivities": 21,
+    "externalActivities": 21,
+    "failedActivities": [],
+    "externalModalPhotos": 6
+  },
+  "desktop-chromium": {
+    "status": 200,
+    "days": 16,
+    "checks": [
+      {
+        "date": "2026-11-21",
+        "images": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Toronto_by_Sentinel-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Toronto_by_Sentinel-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/0/0d/London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Toronto_by_Sentinel-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+      },
+      {
+        "date": "2026-11-23",
+        "images": [
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/South_facade_of_the_Rijksmuseum_Amsterdam_%28DSCF0528%29.jpg/1280px-South_facade_of_the_Rijksmuseum_Amsterdam_%28DSCF0528%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/Logo_-_Van_Gogh_Museum.png/1280px-Logo_-_Van_Gogh_Museum.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/Eerste_Leliedwarsstraat.jpg/1280px-Eerste_Leliedwarsstraat.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png/1280px-Imagen_de_los_canales_conc%C3%A9ntricos_en_%C3%81msterdam.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/South_facade_of_the_Rijksmuseum_Amsterdam_%28DSCF0528%29.jpg/1280px-South_facade_of_the_Rijksmuseum_Amsterdam_%28DSCF0528%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+      },
+      {
+        "date": "2026-11-24",
+        "images": [
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Amberes%3B_vistas_MAS_2.jpg/1280px-Amberes%3B_vistas_MAS_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Antwerpen_-_Station_Antwerpen-Centraal_%2811%29.jpg/1280px-Antwerpen_-_Station_Antwerpen-Centraal_%2811%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Grote_Markt_%28Antwerpen%29.jpg/1280px-Grote_Markt_%28Antwerpen%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Amberes%3B_vistas_MAS_2.jpg/1280px-Amberes%3B_vistas_MAS_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Amberes%3B_vistas_MAS_2.jpg/1280px-Amberes%3B_vistas_MAS_2.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+      },
+      {
+        "date": "2026-11-27",
+        "images": [
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1280px-Louvre_Museum_Wikimedia_Commons.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg/1280px-Crowd_in_the_Jardin_des_Tuileries%2C_Paris_July_2014.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Le_sacre_coeur.jpg/1280px-Le_sacre_coeur.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1280px-Louvre_Museum_Wikimedia_Commons.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+      },
+      {
+        "date": "2026-12-03",
+        "images": [
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg/1280px-Tower_of_London_from_the_Shard_%288515883950%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d6/London-Eye-2009.JPG/1280px-London-Eye-2009.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f8/Walkie-Talkie_-_Sept_2015_%28cropped%29.jpg/1280px-Walkie-Talkie_-_Sept_2015_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Tower_Bridge_at_Dawn.jpg/1280px-Tower_Bridge_at_Dawn.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Tower_Bridge_at_Dawn.jpg/1280px-Tower_Bridge_at_Dawn.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
+      },
+      {
+        "date": "2026-12-06",
+        "images": [
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/0/0d/London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/0/0d/London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          },
+          {
+            "src": "https://upload.wikimedia.org/wikipedia/commons/5/5c/Toronto_by_Sentinel-2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+            "visible": true,
+            "decoded": true
+          }
+        ],
+        "modalPhoto": "https://upload.wikimedia.org/wikipedia/commons/0/0d/London_-_Heathrow_%28LHR_-_EGLL%29_AN1572653.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+      }
+    ],
+    "errors": [],
+    "totalActivities": 21,
+    "externalActivities": 21,
+    "failedActivities": [],
+    "externalModalPhotos": 6
+  }
+}
