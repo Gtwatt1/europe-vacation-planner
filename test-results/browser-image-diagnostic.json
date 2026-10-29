@@ -1,5 +1,5 @@
 {
-  "git_sha": "bd19612c9f52c2e22663246581a40aa30680ffb4",
+  "git_sha": "b6d9135c96be378e41fe4131f1558bb7d909fea7",
   "results": {
     "mobile-webkit": {
       "status": 200,
@@ -129,28 +129,28 @@
             "complete": true,
             "width": 1000,
             "display": "block",
-            "opacity": "0"
+            "opacity": "1"
           },
           {
             "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-1.jpg",
             "complete": true,
             "width": 973,
             "display": "block",
-            "opacity": "0"
+            "opacity": "1"
           },
           {
             "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-2.jpg",
             "complete": true,
             "width": 1000,
             "display": "block",
-            "opacity": "0"
+            "opacity": "1"
           },
           {
             "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-3.jpg",
             "complete": true,
             "width": 1000,
             "display": "block",
-            "opacity": "0"
+            "opacity": "1"
           }
         ]
       },
