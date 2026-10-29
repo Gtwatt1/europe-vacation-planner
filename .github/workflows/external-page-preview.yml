@@ -1,0 +1,34 @@
+name: Test external images in the real trip planner
+on:
+  push:
+    paths:
+      - "tests/external_page_preview.py"
+      - ".github/workflows/external-page-preview.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  browser-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install playwright
+      - run: python -m playwright install chromium webkit --with-deps
+      - name: Verify remote photos render across all dates and activity cards
+        run: python tests/external_page_preview.py
+      - name: Save browser results
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if test -f test-results/external-page-preview.json; then
+            git add test-results/external-page-preview.json
+            if ! git diff --cached --quiet; then
+              git commit -m "Record external-photo preview browser test"
+              git push
+            fi
+          fi
