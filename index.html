@@ -113,7 +113,17 @@
  .days .cell.trip.transport-day .day-num{padding-right:12px!important;gap:1px}
  .days .cell.trip.transport-day .transport-destination{margin-top:6px}
 }
-</style><style>.mobile-day-label{display:none}@media(max-width:680px){.desktop-day-label{display:none}.mobile-day-label{display:inline}.days .cell.trip .day-num{font-size:10px!important;gap:2px!important;letter-spacing:-.025em}.days .cell.trip .country-flag{font-size:12px!important}.days .cell.trip .city,.days .cell.trip .transport-destination{font-size:9px!important}}</style></head>
+</style><style>.mobile-day-label{display:none}@media(max-width:680px){.desktop-day-label{display:none}.mobile-day-label{display:inline}.days .cell.trip .day-num{font-size:10px!important;gap:2px!important;letter-spacing:-.025em}.days .cell.trip .country-flag{font-size:12px!important}.days .cell.trip .city,.days .cell.trip .transport-destination{font-size:9px!important}}</style><style>
+@media(max-width:680px){
+ .days .cell.trip{min-height:100px!important;display:flex;flex-direction:column;align-items:flex-start;gap:3px!important}
+ .days .cell.trip .day-num{display:flex;flex-direction:column;align-items:flex-start;gap:3px!important;white-space:normal}
+ .days .cell.trip .mobile-day-label{display:block;font-size:11px;line-height:1.1}
+ .days .cell.trip .country-flag{display:block;font-size:15px!important;line-height:1.2;margin:0!important}
+ .days .cell.trip.transport-day .transport-mode{position:static!important;display:block;align-self:flex-start;margin:0;font-size:12px!important;padding:2px!important;background:#f1fff4}
+ .days .cell.trip.transport-day .day-num{padding:0!important}
+ .days .cell.trip .city,.days .cell.trip .transport-destination{margin-top:auto!important;font-size:9px!important;line-height:1.12}
+}
+</style></head>
 <body><header class="hero"><div class="hero-inner"><div class="eyebrow">Our winter escape · 2026</div><h1>Our European escape.</h1><p>Tap any day to explore the full itinerary, timings, helpful links and notes.</p><div class="hero-meta"><span>21 Nov – 6 Dec 2026</span><span>Amsterdam · Paris · London · Newcastle</span></div></div></header>
 <main class="shell"><section id="calendar-view"><div class="section-head"><h2>November → December 2026</h2><p>Tap any date to see the plan for the day</p></div><div class="calendar"><div id="whole-trip" class="days"></div></div><p class="footnote">Times are local to each destination. Tap a date to view activities and add notes.</p></section></main>
 <footer class="foot">Tap a day for details · Saved notes stay on this device.</footer>
