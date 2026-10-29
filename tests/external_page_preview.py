@@ -1,7 +1,7 @@
 import asyncio, json, pathlib
 from playwright.async_api import async_playwright
 
-URL="https://europe-vacation-planner-2026.onrender.com/?imageSource=external&previewCheck=1"
+URL="https://europe-vacation-planner-2026.onrender.com/?previewCheck=defaultExternal"
 KEYS=["2026-11-21","2026-11-23","2026-11-24","2026-11-27","2026-12-03","2026-12-06"]
 
 async def check_browser(p,label,engine,mobile):
