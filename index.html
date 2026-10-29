@@ -139,6 +139,14 @@
 #backdrop .modal{position:relative}
 #backdrop .close{position:fixed;top:max(18px,env(safe-area-inset-top,0px) + 12px);right:max(18px,calc((100vw - 920px)/2 + 20px));z-index:10010;width:46px;height:46px;border-radius:50%;background:#fff;color:#152b38;box-shadow:0 4px 20px #0005;font-size:28px;font-weight:600;display:flex;align-items:center;justify-content:center}
 @media(max-width:680px){#backdrop .close{top:calc(env(safe-area-inset-top,0px) + 17px);right:17px;width:45px;height:45px;position:fixed!important}}
+</style><style>
+/* Render actual image elements in calendar tiles, avoiding iOS background-image inconsistencies. */
+.cell.trip{position:relative!important;isolation:isolate;overflow:hidden;background-image:none!important;background-color:#214a4d!important}
+.cell.trip .calendar-cell-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:-2;pointer-events:none}
+.cell.trip:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,29,42,.22),rgba(11,29,42,.82));z-index:-1;pointer-events:none}
+.cell.trip.transport-day{background-image:none!important}
+.cell.trip .calendar-cell-photo[src=""]{display:none}
+@media(max-width:680px){.days .cell.trip .calendar-cell-photo{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;display:block!important}}
 </style></head>
 <body><header class="hero"><div class="hero-inner"><div class="eyebrow">Our winter escape · 2026</div><h1>Our European escape.</h1><p>Tap any day to explore the full itinerary, timings, helpful links and notes.</p><div class="hero-meta"><span>21 Nov – 6 Dec 2026</span><span>Amsterdam · Paris · London · Newcastle</span></div></div></header>
 <main class="shell"><section id="calendar-view"><div class="section-head"><h2>November → December 2026</h2><p>Tap any date to see the plan for the day</p></div><div class="calendar"><div id="whole-trip" class="days"></div></div><p class="footnote">Times are local to each destination. Tap a date to view activities and add notes.</p></section></main>
@@ -217,7 +225,7 @@ function drawWholeCalendar(){
   btn.innerHTML=travel
    ? `<span class="day-num"><span class="desktop-day-label">${calendarDate}</span><span class="mobile-day-label">${mobileDate}</span> <span class="country-flag" aria-label="Destination country flag">${dayFlag(key,travel.destination)}</span></span><span class="transport-mode" aria-label="${safe(travel.mode)}" title="${safe(travel.mode)}">${travelIcon(travel)}</span><span class="transport-destination">${safe(shortCity)}</span><span class="transport-time">${safe(day.desc)}</span>`
    : `<span class="day-num"><span class="desktop-day-label">${calendarDate}</span><span class="mobile-day-label">${mobileDate}</span> <span class="country-flag" aria-label="Country flag">${flag}</span></span><span class="city">${safe(shortCity)}</span><span class="detail">${safe(day.desc)}</span>`;
-  btn.onclick=()=>openDay(key);root.appendChild(btn);setAccurateDayPhoto(key,btn,true);
+  const photo=document.createElement('img');photo.className='calendar-cell-photo';photo.alt='';photo.loading='lazy';photo.decoding='async';photo.src=localImage(key)||'';btn.prepend(photo);btn.onclick=()=>openDay(key);root.appendChild(btn);
  });
 }
 function drawPlaces(){const a=[['Amsterdam','3 nights','amsterdam'],['Paris','6 nights','paris'],['London','4 nights','london'],['Newcastle','1 night','newcastle']];document.getElementById('places').innerHTML=a.map(([title,n,img])=>`<div class="place-card"><img src="${onlinePhotos[img]||onlinePhotos.paris}" alt="${title} travel photograph" loading="lazy" onerror="this.style.display='none'"><div class="place-content"><h3>${title}</h3><span>${n}</span></div></div>`).join('')}
