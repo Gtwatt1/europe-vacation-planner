@@ -46,6 +46,7 @@ async def main():
       try:result[label]=await check_browser(p,label,engine,mobile)
       except Exception as e:result[label]={"error":str(e)}
       print(label,{k:v for k,v in result[label].items() if k!="checks"},flush=True)
+  result["tested_url"]=URL
   path=pathlib.Path("test-results");path.mkdir(exist_ok=True)
   (path/"external-page-preview.json").write_text(json.dumps(result,indent=2))
 
