@@ -94,7 +94,26 @@
  .days .cell.trip.transport-day{padding-top:5px!important;padding-right:3px!important;gap:3px!important;border-width:1px!important}
  .days .cell.trip.transport-day .transport-mode{position:static!important;align-self:flex-start;font-size:8px!important;padding:3px 3px;line-height:1.05;max-width:100%;overflow-wrap:anywhere}
 }
- .cell.trip.transport-day .transport-mode{font-size:16px!important;line-height:1!important;padding:5px 6px!important;min-width:29px;text-align:center} @media(max-width:680px){.days .cell.trip.transport-day .transport-mode{position:absolute!important;top:5px!important;right:4px!important;font-size:13px!important;min-width:0;padding:3px!important;line-height:1!important}.days .cell.trip.transport-day .day-num{padding-right:14px!important}} </style></head>
+ .cell.trip.transport-day .transport-mode{font-size:16px!important;line-height:1!important;padding:5px 6px!important;min-width:29px;text-align:center} @media(max-width:680px){.days .cell.trip.transport-day .transport-mode{position:absolute!important;top:5px!important;right:4px!important;font-size:13px!important;min-width:0;padding:3px!important;line-height:1!important}.days .cell.trip.transport-day .day-num{padding-right:14px!important}} </style><style>
+/* Compact, calm mobile month grid — details stay in the day sheet. */
+@media(max-width:680px){
+ .shell{padding:0 8px}
+ .section-head{margin:17px 4px 10px}
+ .section-head h2{font-size:22px}
+ .calendar{padding:7px 5px;border-radius:12px}
+ .days{column-gap:3px!important;row-gap:5px!important}
+ .days .week{font-size:10px;padding:5px 0 7px}
+ .days .cell.trip{min-height:83px!important;border-radius:8px;padding:5px 3px!important;gap:3px!important;align-items:flex-start;justify-content:flex-start;box-shadow:none!important;background-position:center}
+ .days .cell.trip .day-num{display:flex;align-items:center;gap:3px;font-size:11px!important;white-space:nowrap;padding:0!important;line-height:1.2}
+ .days .cell.trip .country-flag{font-size:12px!important;margin:0}
+ .days .cell.trip .city,.days .cell.trip .transport-destination{font-size:9px!important;line-height:1.15!important;font-weight:750;overflow-wrap:anywhere;max-width:100%}
+ .days .cell.trip .detail,.days .cell.trip .transport-time{display:none!important}
+ .days .cell.trip.transport-day{padding:5px 3px!important;border:1px solid #a9e4d2!important}
+ .days .cell.trip.transport-day .transport-mode{position:absolute!important;top:4px!important;right:3px!important;background:#f1fff4;color:#185d48;font-size:11px!important;line-height:1!important;min-width:0!important;padding:2px!important;border-radius:5px}
+ .days .cell.trip.transport-day .day-num{padding-right:12px!important;gap:1px}
+ .days .cell.trip.transport-day .transport-destination{margin-top:6px}
+}
+</style></head>
 <body><header class="hero"><div class="hero-inner"><div class="eyebrow">Our winter escape · 2026</div><h1>Our European escape.</h1><p>Tap any day to explore the full itinerary, timings, helpful links and notes.</p><div class="hero-meta"><span>21 Nov – 6 Dec 2026</span><span>Amsterdam · Paris · London · Newcastle</span></div></div></header>
 <main class="shell"><section id="calendar-view"><div class="section-head"><h2>November → December 2026</h2><p>Tap any date to see the plan for the day</p></div><div class="calendar"><div id="whole-trip" class="days"></div></div><p class="footnote">Times are local to each destination. Tap a date to view activities and add notes.</p></section></main>
 <footer class="foot">Tap a day for details · Saved notes stay on this device.</footer>
@@ -165,9 +184,10 @@ function drawWholeCalendar(){
   btn.title='Open '+dateFmt(key);
   btn.setAttribute('aria-label','Open '+dateFmt(key)+' '+day.city+(travel?' '+travel.mode+' to '+travel.destination:''));
   const flag=dayFlag(key,day.city);
+  const shortCity=travel?travel.destination.replace(' · return',''):day.city.replace(/ day trip.*$/i,'').replace(/, Belgium$/i,'').replace(/ \+ Paris$/i,'');
   btn.innerHTML=travel
-   ? `<span class="day-num">${date.toLocaleDateString('en-US',{month:'short',day:'numeric'})} <span class="country-flag" aria-label="Destination country flag">${dayFlag(key,travel.destination)}</span></span><span class="transport-mode" aria-label="${safe(travel.mode)}" title="${safe(travel.mode)}">${travelIcon(travel)}</span><span class="transport-destination">${safe(travel.destination)}</span><span class="transport-time">${safe(day.desc)}</span>`
-   : `<span class="day-num">${date.toLocaleDateString('en-US',{month:'short',day:'numeric'})} <span class="country-flag" aria-label="Country flag">${flag}</span></span><span class="city">${safe(day.city)}</span><span class="detail">${safe(day.desc)}</span>`;
+   ? `<span class="day-num">${date.toLocaleDateString('en-US',{month:'short',day:'numeric'})} <span class="country-flag" aria-label="Destination country flag">${dayFlag(key,travel.destination)}</span></span><span class="transport-mode" aria-label="${safe(travel.mode)}" title="${safe(travel.mode)}">${travelIcon(travel)}</span><span class="transport-destination">${safe(shortCity)}</span><span class="transport-time">${safe(day.desc)}</span>`
+   : `<span class="day-num">${date.toLocaleDateString('en-US',{month:'short',day:'numeric'})} <span class="country-flag" aria-label="Country flag">${flag}</span></span><span class="city">${safe(shortCity)}</span><span class="detail">${safe(day.desc)}</span>`;
   btn.onclick=()=>openDay(key);root.appendChild(btn);setAccurateDayPhoto(key,btn,true);
  });
 }
