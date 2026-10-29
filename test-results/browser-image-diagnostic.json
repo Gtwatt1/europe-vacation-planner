@@ -1,526 +1,473 @@
 {
-  "mobile": {
-    "status": 200,
-    "cells": [
-      {
-        "index": 0,
-        "text": "21st\n\ud83c\udde8\ud83c\udde6\n\u2708\ufe0f\nAmsterdam",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-21.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-21.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 1,
-        "text": "22nd\n\ud83c\uddf3\ud83c\uddf1\n\u2708\ufe0f\nAmsterdam",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-22.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-22.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 2,
-        "text": "23rd\n\ud83c\uddf3\ud83c\uddf1\nAmsterdam",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-23.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-23.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 3,
-        "text": "24th\n\ud83c\udde7\ud83c\uddea\n\ud83d\udd01\nAntwerp",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-24.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-24.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 4,
-        "text": "25th\n\ud83c\uddeb\ud83c\uddf7\n\ud83d\ude86\nParis",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-25.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-25.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 5,
-        "text": "26th\n\ud83c\uddeb\ud83c\uddf7\nParis",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-26.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-26.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 6,
-        "text": "27th\n\ud83c\uddeb\ud83c\uddf7\nParis",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-27.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-27.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 7,
-        "text": "28th\n\ud83c\uddeb\ud83c\uddf7\nParis",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-28.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-28.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 8,
-        "text": "29th\n\ud83c\uddeb\ud83c\uddf7\nVersailles",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-29.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-29.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 9,
-        "text": "30th\n\ud83c\uddeb\ud83c\uddf7\n\ud83d\udd01\nStrasbourg",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-30.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-30.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 10,
-        "text": "1st\n\ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nLondon",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-12-01.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-01.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 11,
-        "text": "2nd\n\ud83c\uddec\ud83c\udde7\nLondon",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-12-02.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-02.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 12,
-        "text": "3rd\n\ud83c\uddec\ud83c\udde7\nLondon",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-12-03.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-03.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 13,
-        "text": "4th\n\ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nNewcastle",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-12-04.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-04.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 14,
-        "text": "5th\n\ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nLondon",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-12-05.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-05.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      },
-      {
-        "index": 15,
-        "text": "6th\n\ud83c\udde8\ud83c\udde6\n\u2708\ufe0f\nToronto",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-12-06.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-06.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 49.140625,
-        "height": 100
-      }
-    ],
-    "nativeLoads": [
-      {
-        "url": "images/2026-11-21.jpg",
-        "loaded": true,
-        "width": 626
-      },
-      {
-        "url": "images/2026-11-22.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-23.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-24.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-25.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-26.jpg",
-        "loaded": true,
-        "width": 450
-      },
-      {
-        "url": "images/2026-11-27.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-28.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-29.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-30.jpg",
-        "loaded": true,
-        "width": 587
-      },
-      {
-        "url": "images/2026-12-01.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-12-02.jpg",
-        "loaded": true,
-        "width": 422
-      },
-      {
-        "url": "images/2026-12-03.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-12-04.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-12-05.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-12-06.jpg",
-        "loaded": true,
-        "width": 1000
-      }
-    ],
-    "overlay": {
-      "open": true,
-      "photos": [
+  "git_sha": "bd19612c9f52c2e22663246581a40aa30680ffb4",
+  "results": {
+    "mobile-webkit": {
+      "status": 200,
+      "ready": true,
+      "cells": [
         {
-          "url": "",
-          "complete": false,
-          "width": 0,
-          "display": "none"
+          "index": 0,
+          "text": "21st\n\ud83c\udde8\ud83c\udde6\n\u2708\ufe0f\nAmsterdam",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-21.jpg\")",
+          "width": 49.15625,
+          "height": 100
         },
         {
-          "url": "",
-          "complete": false,
-          "width": 0,
-          "display": "none"
+          "index": 1,
+          "text": "22nd\n\ud83c\uddf3\ud83c\uddf1\n\u2708\ufe0f\nAmsterdam",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-22.jpg\")",
+          "width": 49.140625,
+          "height": 100
         },
         {
-          "url": "",
-          "complete": false,
-          "width": 0,
-          "display": "none"
+          "index": 2,
+          "text": "23rd\n\ud83c\uddf3\ud83c\uddf1\nAmsterdam",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-23.jpg\")",
+          "width": 49.140625,
+          "height": 100
         },
         {
-          "url": "",
-          "complete": false,
-          "width": 0,
-          "display": "none"
+          "index": 3,
+          "text": "24th\n\ud83c\udde7\ud83c\uddea\n\ud83d\udd01\nAntwerp",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-24.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 4,
+          "text": "25th\n\ud83c\uddeb\ud83c\uddf7\n\ud83d\ude86\nParis",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-25.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 5,
+          "text": "26th\n\ud83c\uddeb\ud83c\uddf7\nParis",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-26.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 6,
+          "text": "27th\n\ud83c\uddeb\ud83c\uddf7\nParis",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-27.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 7,
+          "text": "28th\n\ud83c\uddeb\ud83c\uddf7\nParis",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-28.jpg\")",
+          "width": 49.15625,
+          "height": 100
+        },
+        {
+          "index": 8,
+          "text": "29th\n\ud83c\uddeb\ud83c\uddf7\nVersailles",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-29.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 9,
+          "text": "30th\n\ud83c\uddeb\ud83c\uddf7\n\ud83d\udd01\nStrasbourg",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-30.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 10,
+          "text": "1st\n\ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nLondon",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-01.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 11,
+          "text": "2nd\n\ud83c\uddec\ud83c\udde7\nLondon",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-02.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 12,
+          "text": "3rd\n\ud83c\uddec\ud83c\udde7\nLondon",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-03.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 13,
+          "text": "4th\n\ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nNewcastle",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-04.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 14,
+          "text": "5th\n\ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nLondon",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-05.jpg\")",
+          "width": 49.15625,
+          "height": 100
+        },
+        {
+          "index": 15,
+          "text": "6th\n\ud83c\udde8\ud83c\udde6\n\u2708\ufe0f\nToronto",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-06.jpg\")",
+          "width": 49.140625,
+          "height": 100
         }
-      ]
+      ],
+      "testedImageUrls": 73,
+      "imagesLoaded": 73,
+      "failedAssets": [],
+      "overlay": {
+        "open": true,
+        "photos": [
+          {
+            "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-0.jpg",
+            "complete": true,
+            "width": 1000,
+            "display": "block",
+            "opacity": "0"
+          },
+          {
+            "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-1.jpg",
+            "complete": true,
+            "width": 973,
+            "display": "block",
+            "opacity": "0"
+          },
+          {
+            "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-2.jpg",
+            "complete": true,
+            "width": 1000,
+            "display": "block",
+            "opacity": "0"
+          },
+          {
+            "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-3.jpg",
+            "complete": true,
+            "width": 1000,
+            "display": "block",
+            "opacity": "0"
+          }
+        ]
+      },
+      "errors": [],
+      "requestFailures": []
     },
-    "errors": [],
-    "requestFailures": []
-  },
-  "desktop": {
-    "status": 200,
-    "cells": [
-      {
-        "index": 0,
-        "text": "Nov 21 \ud83c\udde8\ud83c\udde6\n\u2708\ufe0f\nAmsterdam\nOutbound flight \u00b7 Departs 21:45",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-21.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-21.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.4375,
-        "height": 145
-      },
-      {
-        "index": 1,
-        "text": "Nov 22 \ud83c\uddf3\ud83c\uddf1\n\u2708\ufe0f\nAmsterdam\nArrive 14:05 \u00b7 Old town & canals",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-22.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-22.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.421875,
-        "height": 145
-      },
-      {
-        "index": 2,
-        "text": "Nov 23 \ud83c\uddf3\ud83c\uddf1\nAmsterdam\nMuseums \u00b7 De Pijp \u00b7 Jordaan \u00b7 canal cr",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-23.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-23.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.421875,
-        "height": 145
-      },
-      {
-        "index": 3,
-        "text": "Nov 24 \ud83c\udde7\ud83c\uddea\n\ud83d\udd01\nAntwerp\nAmsterdam \u2194 Antwerp \u00b7 Return to Amste",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-24.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-24.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.4375,
-        "height": 145
-      },
-      {
-        "index": 4,
-        "text": "Nov 25 \ud83c\uddeb\ud83c\uddf7\n\ud83d\ude86\nParis\nEurostar \u00b7 18:10\u201321:41",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-25.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-25.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.421875,
-        "height": 145
-      },
-      {
-        "index": 5,
-        "text": "Nov 26 \ud83c\uddeb\ud83c\uddf7\nParis\nEiffel Tower \u00b7 Arc de Triomphe \u00b7 Seine",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-26.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-26.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.4375,
-        "height": 145
-      },
-      {
-        "index": 6,
-        "text": "Nov 27 \ud83c\uddeb\ud83c\uddf7\nParis\nLouvre \u00b7 Tuileries \u00b7 Montmartre",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-27.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-27.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.421875,
-        "height": 145
-      },
-      {
-        "index": 7,
-        "text": "Nov 28 \ud83c\uddeb\ud83c\uddf7\nParis\nPalais Garnier \u00b7 Galeries Lafayette \u00b7 Le M",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-28.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-28.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.4375,
-        "height": 145
-      },
-      {
-        "index": 8,
-        "text": "Nov 29 \ud83c\uddeb\ud83c\uddf7\nVersailles\nPalace \u00b7 gardens \u00b7 evening in Paris",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-29.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-29.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.421875,
-        "height": 145
-      },
-      {
-        "index": 9,
-        "text": "Nov 30 \ud83c\uddeb\ud83c\uddf7\n\ud83d\udd01\nStrasbourg\nParis \u2194 Strasbourg \u00b7 Return to Par",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-11-30.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-30.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.421875,
-        "height": 145
-      },
-      {
-        "index": 10,
-        "text": "Dec 1 \ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nLondon\nEurostar \u00b7 13:09\u201314:30",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-12-01.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-01.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.4375,
-        "height": 145
-      },
-      {
-        "index": 11,
-        "text": "Dec 2 \ud83c\uddec\ud83c\udde7\nLondon\nWestminster \u00b7 Buckingham Palace \u00b7 London E",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-12-02.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-02.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.421875,
-        "height": 145
-      },
-      {
-        "index": 12,
-        "text": "Dec 3 \ud83c\uddec\ud83c\udde7\nLondon\nTower of London \u00b7 Borough Market \u00b7 Sky Gar",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-12-03.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-03.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.4375,
-        "height": 145
-      },
-      {
-        "index": 13,
-        "text": "Dec 4 \ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nNewcastle\nMorning train \u00b7 Quayside \u00b7 city cent",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-12-04.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-04.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.421875,
-        "height": 145
-      },
-      {
-        "index": 14,
-        "text": "Dec 5 \ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nLondon\nNewcastle daytime \u00b7 evening train",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-12-05.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-05.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.4375,
-        "height": 145
-      },
-      {
-        "index": 15,
-        "text": "Dec 6 \ud83c\udde8\ud83c\udde6\n\u2708\ufe0f\nToronto\nFlight 11:45\u201319:15",
-        "inline": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"images/2026-12-06.jpg\")",
-        "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-06.jpg\")",
-        "backgroundSize": "cover, cover",
-        "width": 159.421875,
-        "height": 145
-      }
-    ],
-    "nativeLoads": [
-      {
-        "url": "images/2026-11-21.jpg",
-        "loaded": true,
-        "width": 626
-      },
-      {
-        "url": "images/2026-11-22.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-23.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-24.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-25.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-26.jpg",
-        "loaded": true,
-        "width": 450
-      },
-      {
-        "url": "images/2026-11-27.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-28.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-29.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-11-30.jpg",
-        "loaded": true,
-        "width": 587
-      },
-      {
-        "url": "images/2026-12-01.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-12-02.jpg",
-        "loaded": true,
-        "width": 422
-      },
-      {
-        "url": "images/2026-12-03.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-12-04.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-12-05.jpg",
-        "loaded": true,
-        "width": 1000
-      },
-      {
-        "url": "images/2026-12-06.jpg",
-        "loaded": true,
-        "width": 1000
-      }
-    ],
-    "overlay": {
-      "open": true,
-      "photos": [
+    "mobile-chromium": {
+      "status": 200,
+      "ready": true,
+      "cells": [
         {
-          "url": "",
-          "complete": false,
-          "width": 0,
-          "display": "none"
+          "index": 0,
+          "text": "21st\n\ud83c\udde8\ud83c\udde6\n\u2708\ufe0f\nAmsterdam",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-21.jpg\")",
+          "width": 49.140625,
+          "height": 100
         },
         {
-          "url": "",
-          "complete": false,
-          "width": 0,
-          "display": "none"
+          "index": 1,
+          "text": "22nd\n\ud83c\uddf3\ud83c\uddf1\n\u2708\ufe0f\nAmsterdam",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-22.jpg\")",
+          "width": 49.140625,
+          "height": 100
         },
         {
-          "url": "",
-          "complete": false,
-          "width": 0,
-          "display": "none"
+          "index": 2,
+          "text": "23rd\n\ud83c\uddf3\ud83c\uddf1\nAmsterdam",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-23.jpg\")",
+          "width": 49.140625,
+          "height": 100
         },
         {
-          "url": "",
-          "complete": false,
-          "width": 0,
-          "display": "none"
+          "index": 3,
+          "text": "24th\n\ud83c\udde7\ud83c\uddea\n\ud83d\udd01\nAntwerp",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-24.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 4,
+          "text": "25th\n\ud83c\uddeb\ud83c\uddf7\n\ud83d\ude86\nParis",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-25.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 5,
+          "text": "26th\n\ud83c\uddeb\ud83c\uddf7\nParis",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-26.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 6,
+          "text": "27th\n\ud83c\uddeb\ud83c\uddf7\nParis",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-27.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 7,
+          "text": "28th\n\ud83c\uddeb\ud83c\uddf7\nParis",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-28.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 8,
+          "text": "29th\n\ud83c\uddeb\ud83c\uddf7\nVersailles",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-29.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 9,
+          "text": "30th\n\ud83c\uddeb\ud83c\uddf7\n\ud83d\udd01\nStrasbourg",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-30.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 10,
+          "text": "1st\n\ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nLondon",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-01.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 11,
+          "text": "2nd\n\ud83c\uddec\ud83c\udde7\nLondon",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-02.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 12,
+          "text": "3rd\n\ud83c\uddec\ud83c\udde7\nLondon",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-03.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 13,
+          "text": "4th\n\ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nNewcastle",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-04.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 14,
+          "text": "5th\n\ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nLondon",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-05.jpg\")",
+          "width": 49.140625,
+          "height": 100
+        },
+        {
+          "index": 15,
+          "text": "6th\n\ud83c\udde8\ud83c\udde6\n\u2708\ufe0f\nToronto",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-06.jpg\")",
+          "width": 49.140625,
+          "height": 100
         }
-      ]
+      ],
+      "testedImageUrls": 73,
+      "imagesLoaded": 73,
+      "failedAssets": [],
+      "overlay": {
+        "open": true,
+        "photos": [
+          {
+            "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-0.jpg",
+            "complete": true,
+            "width": 1000,
+            "display": "block",
+            "opacity": "1"
+          },
+          {
+            "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-1.jpg",
+            "complete": true,
+            "width": 973,
+            "display": "block",
+            "opacity": "1"
+          },
+          {
+            "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-2.jpg",
+            "complete": true,
+            "width": 1000,
+            "display": "block",
+            "opacity": "1"
+          },
+          {
+            "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-3.jpg",
+            "complete": true,
+            "width": 1000,
+            "display": "block",
+            "opacity": "1"
+          }
+        ]
+      },
+      "errors": [],
+      "requestFailures": []
     },
-    "errors": [],
-    "requestFailures": []
+    "desktop-chromium": {
+      "status": 200,
+      "ready": true,
+      "cells": [
+        {
+          "index": 0,
+          "text": "Nov 21 \ud83c\udde8\ud83c\udde6\n\u2708\ufe0f\nAmsterdam\nOutbound flight \u00b7 Departs 21:45",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-21.jpg\")",
+          "width": 159.4375,
+          "height": 145
+        },
+        {
+          "index": 1,
+          "text": "Nov 22 \ud83c\uddf3\ud83c\uddf1\n\u2708\ufe0f\nAmsterdam\nArrive 14:05 \u00b7 Old town & canals",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-22.jpg\")",
+          "width": 159.421875,
+          "height": 145
+        },
+        {
+          "index": 2,
+          "text": "Nov 23 \ud83c\uddf3\ud83c\uddf1\nAmsterdam\nMuseums \u00b7 De Pijp \u00b7 Jordaan \u00b7 canal cr",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-23.jpg\")",
+          "width": 159.421875,
+          "height": 145
+        },
+        {
+          "index": 3,
+          "text": "Nov 24 \ud83c\udde7\ud83c\uddea\n\ud83d\udd01\nAntwerp\nAmsterdam \u2194 Antwerp \u00b7 Return to Amste",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-24.jpg\")",
+          "width": 159.4375,
+          "height": 145
+        },
+        {
+          "index": 4,
+          "text": "Nov 25 \ud83c\uddeb\ud83c\uddf7\n\ud83d\ude86\nParis\nEurostar \u00b7 18:10\u201321:41",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-25.jpg\")",
+          "width": 159.421875,
+          "height": 145
+        },
+        {
+          "index": 5,
+          "text": "Nov 26 \ud83c\uddeb\ud83c\uddf7\nParis\nEiffel Tower \u00b7 Arc de Triomphe \u00b7 Seine",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-26.jpg\")",
+          "width": 159.4375,
+          "height": 145
+        },
+        {
+          "index": 6,
+          "text": "Nov 27 \ud83c\uddeb\ud83c\uddf7\nParis\nLouvre \u00b7 Tuileries \u00b7 Montmartre",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-27.jpg\")",
+          "width": 159.421875,
+          "height": 145
+        },
+        {
+          "index": 7,
+          "text": "Nov 28 \ud83c\uddeb\ud83c\uddf7\nParis\nPalais Garnier \u00b7 Galeries Lafayette \u00b7 Le M",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-28.jpg\")",
+          "width": 159.4375,
+          "height": 145
+        },
+        {
+          "index": 8,
+          "text": "Nov 29 \ud83c\uddeb\ud83c\uddf7\nVersailles\nPalace \u00b7 gardens \u00b7 evening in Paris",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-29.jpg\")",
+          "width": 159.421875,
+          "height": 145
+        },
+        {
+          "index": 9,
+          "text": "Nov 30 \ud83c\uddeb\ud83c\uddf7\n\ud83d\udd01\nStrasbourg\nParis \u2194 Strasbourg \u00b7 Return to Par",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-11-30.jpg\")",
+          "width": 159.421875,
+          "height": 145
+        },
+        {
+          "index": 10,
+          "text": "Dec 1 \ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nLondon\nEurostar \u00b7 13:09\u201314:30",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-01.jpg\")",
+          "width": 159.4375,
+          "height": 145
+        },
+        {
+          "index": 11,
+          "text": "Dec 2 \ud83c\uddec\ud83c\udde7\nLondon\nWestminster \u00b7 Buckingham Palace \u00b7 London E",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-02.jpg\")",
+          "width": 159.421875,
+          "height": 145
+        },
+        {
+          "index": 12,
+          "text": "Dec 3 \ud83c\uddec\ud83c\udde7\nLondon\nTower of London \u00b7 Borough Market \u00b7 Sky Gar",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-03.jpg\")",
+          "width": 159.4375,
+          "height": 145
+        },
+        {
+          "index": 13,
+          "text": "Dec 4 \ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nNewcastle\nMorning train \u00b7 Quayside \u00b7 city cent",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-04.jpg\")",
+          "width": 159.421875,
+          "height": 145
+        },
+        {
+          "index": 14,
+          "text": "Dec 5 \ud83c\uddec\ud83c\udde7\n\ud83d\ude86\nLondon\nNewcastle daytime \u00b7 evening train",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-05.jpg\")",
+          "width": 159.4375,
+          "height": 145
+        },
+        {
+          "index": 15,
+          "text": "Dec 6 \ud83c\udde8\ud83c\udde6\n\u2708\ufe0f\nToronto\nFlight 11:45\u201319:15",
+          "computed": "linear-gradient(rgba(11, 29, 42, 0.18), rgba(11, 29, 42, 0.83)), url(\"https://europe-vacation-planner-2026.onrender.com/images/2026-12-06.jpg\")",
+          "width": 159.421875,
+          "height": 145
+        }
+      ],
+      "testedImageUrls": 73,
+      "imagesLoaded": 73,
+      "failedAssets": [],
+      "overlay": {
+        "open": true,
+        "photos": [
+          {
+            "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-0.jpg",
+            "complete": true,
+            "width": 1000,
+            "display": "block",
+            "opacity": "1"
+          },
+          {
+            "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-1.jpg",
+            "complete": true,
+            "width": 973,
+            "display": "block",
+            "opacity": "1"
+          },
+          {
+            "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-2.jpg",
+            "complete": true,
+            "width": 1000,
+            "display": "block",
+            "opacity": "1"
+          },
+          {
+            "url": "https://europe-vacation-planner-2026.onrender.com/images/2026-11-23-3.jpg",
+            "complete": true,
+            "width": 1000,
+            "display": "block",
+            "opacity": "1"
+          }
+        ]
+      },
+      "errors": [],
+      "requestFailures": []
+    }
   }
 }
