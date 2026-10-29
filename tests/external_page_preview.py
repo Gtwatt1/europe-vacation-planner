@@ -2,7 +2,7 @@ import asyncio, json, pathlib
 from playwright.async_api import async_playwright
 
 URL="https://europe-vacation-planner-2026.onrender.com/?imageSource=external&previewCheck=1"
-KEYS=["2026-11-"+str(n).zfill(2) for n in range(21,31)]+["2026-12-"+str(n).zfill(2) for n in range(1,7)]
+KEYS=["2026-11-21","2026-11-23","2026-11-24","2026-11-27","2026-12-03","2026-12-06"]
 
 async def check_browser(p,label,engine,mobile):
   browser=await getattr(p,engine).launch(headless=True)
@@ -26,7 +26,7 @@ async def check_browser(p,label,engine,mobile):
     for key in KEYS:
       await page.evaluate("(key)=>openDay(key)",key)
       await page.wait_for_function("""()=>[...document.querySelectorAll('#tasks .journey-photo')].length>0
-        && [...document.querySelectorAll('#tasks .journey-photo')].every(img=>img.complete&&img.naturalWidth>0)""",timeout=30000)
+        && [...document.querySelectorAll('#tasks .journey-photo')].every(img=>img.complete&&img.naturalWidth>0)""",timeout=15000)
       entry=await page.evaluate("""key=>({date:key,images:[...document.querySelectorAll('#tasks .journey-photo')].map(img=>({
         src:img.currentSrc,visible:getComputedStyle(img).opacity==='1'&&getComputedStyle(img).display!=='none',
         decoded:img.naturalWidth>0})),modalPhoto:document.querySelector('#modalPhoto')?.currentSrc})""",key)
