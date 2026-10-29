@@ -38,28 +38,37 @@ def get_json(url):
   req=urllib.request.Request(url,headers=HEADERS)
   with urllib.request.urlopen(req,timeout=25) as response:return json.load(response)
 source_cache={}
-def source_for(title):
-  if title not in source_cache:
+def get_titles_in_bulk(titles):
+  byname={}
+  for i in range(0,len(titles),35):
+    batch=titles[i:i+35]
+    q=("|".join(batch))
+    url=("https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2"
+         "&redirects=1&prop=pageimages&piprop=thumbnail&pithumbsize=1000&titles="+urllib.parse.quote(q))
     try:
-      url=("https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2"
-           "&redirects=1&prop=pageimages&piprop=thumbnail&pithumbsize=1000&titles="+urllib.parse.quote(title))
-      data=get_json(url)
-      source_cache[title]=next((p.get("thumbnail",{}).get("source") for p in data.get("query",{}).get("pages",[]) if p.get("thumbnail")),None)
+      data=get_json(url).get("query",{})
+      pages={p.get("title","").casefold():p.get("thumbnail",{}).get("source") for p in data.get("pages",[])}
+      normalized={p["from"]:p["to"] for p in data.get("normalized",[])}
+      redirects={p["from"]:p["to"] for p in data.get("redirects",[])}
+      for name in batch:
+        resolved=normalized.get(name,name)
+        resolved=redirects.get(resolved,resolved)
+        byname[name]=pages.get(resolved.casefold())
     except Exception as exc:
-      print("lookup failure",title,str(exc)[:150],flush=True)
-      source_cache[title]=None
-  return source_cache[title]
-
+      print("BULK_LOOKUP_FAIL",i,str(exc)[:180],flush=True)
+      for name in batch:byname[name]=None
+  return byname
 targets={}
 for key,d in trip.items():
   targets[key]=[places[key]]
   for i,(_,label) in enumerate(d["items"]):
     t=get_title(label,key)
     targets[key+"-"+str(i)]=list(dict.fromkeys([t,places[key]]))
+source_cache=get_titles_in_bulk(sorted({t for arr in targets.values() for t in arr}))
 manifest={}
 for key,titles in targets.items():
   for title in titles:
-    src=source_for(title)
+    src=source_cache.get(title)
     if src:
       manifest[key]=src
       break
