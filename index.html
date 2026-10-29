@@ -134,6 +134,11 @@
  #backdrop .modal-body{padding:18px 16px 32px!important}
  #backdrop .close{position:sticky;top:8px;z-index:5;flex-shrink:0;width:42px;height:42px;background:#eff3f3;font-size:25px}
 }
+</style><style>
+/* Floating close control remains visible as the itinerary scrolls */
+#backdrop .modal{position:relative}
+#backdrop .close{position:fixed;top:max(18px,env(safe-area-inset-top,0px) + 12px);right:max(18px,calc((100vw - 920px)/2 + 20px));z-index:10010;width:46px;height:46px;border-radius:50%;background:#fff;color:#152b38;box-shadow:0 4px 20px #0005;font-size:28px;font-weight:600;display:flex;align-items:center;justify-content:center}
+@media(max-width:680px){#backdrop .close{top:calc(env(safe-area-inset-top,0px) + 17px);right:17px;width:45px;height:45px;position:fixed!important}}
 </style></head>
 <body><header class="hero"><div class="hero-inner"><div class="eyebrow">Our winter escape · 2026</div><h1>Our European escape.</h1><p>Tap any day to explore the full itinerary, timings, helpful links and notes.</p><div class="hero-meta"><span>21 Nov – 6 Dec 2026</span><span>Amsterdam · Paris · London · Newcastle</span></div></div></header>
 <main class="shell"><section id="calendar-view"><div class="section-head"><h2>November → December 2026</h2><p>Tap any date to see the plan for the day</p></div><div class="calendar"><div id="whole-trip" class="days"></div></div><p class="footnote">Times are local to each destination. Tap a date to view activities and add notes.</p></section></main>
