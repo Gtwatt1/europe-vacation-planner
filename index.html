@@ -112,30 +112,50 @@ async function wikipediaPhoto(title){
  }
  return wikiImageCache.get(title);
 }
+const curatedCommonsPhotos={
+"Amsterdam Centraal station":"Station Amsterdam Centraal (2025).jpg",
+"Rijksmuseum":"Amsterdam, in front of the Rijksmuseum.JPG",
+"Antwerpen-Centraal railway station":"Antwerpen-Centraal railway station.jpg",
+"Amsterdam":"Amsterdam-Centraal Station-01.jpg"
+};
+function commonsFileUrl(file){return "https://commons.wikimedia.org/wiki/Special:FilePath/"+encodeURIComponent(file)+"?width=1000"}
+function dependableCityPhoto(key){
+ const d=trip[key],c=d?.city||"";
+ if(/Antwerp/i.test(c))return dayPhotos["2026-11-24"];
+ if(/Strasbourg/i.test(c))return dayPhotos["2026-11-30"];
+ if(/Newcastle/i.test(c))return dayPhotos["2026-12-05"];
+ if(/Amsterdam/i.test(c)&&!/Paris/i.test(c))return onlinePhotos.amsterdam;
+ if(/London/i.test(c)&&!/Paris/i.test(c))return onlinePhotos.london;
+ return onlinePhotos.paris;
+}
+function showPhoto(img,placeholder,url,backup,label){
+ const apply=src=>{img.onload=()=>{img.style.display="block";placeholder.style.display="none"};img.src=src};
+ img.onerror=()=>{img.onerror=()=>{img.style.display="none";placeholder.style.display="grid";placeholder.textContent=label};apply(backup)};
+ img.alt="Travel photograph: "+label;
+ apply(url||backup);
+}
 async function findRealPhoto(title,img,placeholder,key){
- const result=await wikipediaPhoto(title);
- if(!img.isConnected)return;
- if(result){
-   img.onload=()=>{img.style.display="block";placeholder.style.display="none"};
-   img.onerror=()=>{img.style.display="none";placeholder.style.display="grid"};
-   img.alt="Photograph illustrating "+result.article;
-   img.src=result.src;
-   const link=document.createElement("a");link.href="https://en.wikipedia.org/wiki/"+encodeURIComponent(result.article.replace(/ /g,"_"));link.target="_blank";link.rel="noopener noreferrer";link.textContent="Image source";link.className="photo-source";img.parentNode.append(link);
+ const backup=dependableCityPhoto(key);
+ if(curatedCommonsPhotos[title]){
+  showPhoto(img,placeholder,commonsFileUrl(curatedCommonsPhotos[title]),backup,title);
  }else{
-   placeholder.textContent=title||fallbackArticle(key);
+  // Immediately display a photograph instead of waiting on a third-party API.
+  showPhoto(img,placeholder,backup,backup,title||fallbackArticle(key));
  }
+ const result=await wikipediaPhoto(title);
+ if(!img.isConnected||!result||curatedCommonsPhotos[title])return;
+ // Swap in the exact landmark photo only after it has downloaded successfully.
+ const probe=new Image();
+ probe.onload=()=>{if(img.isConnected){img.src=result.src;img.alt="Photo of "+result.article}};
+ probe.src=result.src;
 }
 async function setAccurateDayPhoto(key,element,isBackground=false){
- const d=trip[key]; const candidates=d.items.map(([time,label])=>photoArticle(label)).filter(Boolean).filter(x=>!["Hotel","Restaurant","Airplane","Rail transport","Tourism","Passport"].includes(x));
- candidates.push(fallbackArticle(key));
- for(const title of [...new Set(candidates)]){
-  const image=await wikipediaPhoto(title);
-  if(!image||!element.isConnected)continue;
-  if(isBackground)element.style.backgroundImage='linear-gradient(180deg,rgba(11,29,42,.18),rgba(11,29,42,.83)),url("'+image.src+'")';
-  else{element.src=image.src;element.alt="Photograph of "+image.article}
+ const d=trip[key],backup=dependableCityPhoto(key);
+ if(isBackground){
+  element.style.backgroundImage='linear-gradient(180deg,rgba(11,29,42,.18),rgba(11,29,42,.83)),url("'+backup+'")';
   return;
  }
- if(!isBackground){element.removeAttribute("src");element.style.display="none"}
+ element.src=backup;element.style.display="block";element.alt=d.city+" travel photograph";
 }
 function drawTasks(){
  const day=trip[activeKey],dateKey=activeKey,list=day.items.concat((state.extra[dateKey]||[]).map(t=>['Your addition',t]));
