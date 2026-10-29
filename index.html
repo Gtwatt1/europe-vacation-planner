@@ -267,27 +267,24 @@ function dependableCityPhoto(key){
  return onlinePhotos.paris;
 }
 function showPhoto(img,placeholder,url,backup,label){
- const sources=[...new Set([url,backup,onlinePhotos.amsterdam,onlinePhotos.paris,onlinePhotos.london].filter(Boolean))];
- let index=0;
- const tryNext=()=>{
-  if(!img.isConnected)return;
-  if(index>=sources.length){img.removeAttribute('src');img.style.display='none';placeholder.style.display='grid';placeholder.textContent=label||'Photograph unavailable';return}
-  img.onload=()=>{img.style.display='block';placeholder.style.display='none'};
-  img.onerror=tryNext;
-  img.src=sources[index++];
- };
- img.alt='Travel photograph: '+(label||'destination');
- tryNext();
+ const apply=src=>{img.onload=()=>{img.style.display="block";placeholder.style.display="none"};img.src=src};
+ img.onerror=()=>{img.onerror=()=>{img.style.display="none";placeholder.style.display="grid";placeholder.textContent=label};apply(backup)};
+ img.alt="Travel photograph: "+label;
+ apply(url||backup);
 }
 async function findRealPhoto(title,img,placeholder,key){
  const backup=dependableCityPhoto(key);
- const name=title||fallbackArticle(key);
- // Begin with a working photo candidate instead of leaving an empty image.
- showPhoto(img,placeholder,curatedCommonsPhotos[name]?commonsFileUrl(curatedCommonsPhotos[name]):backup,backup,name);
- const result=await wikipediaPhoto(name);
- if(!img.isConnected||!result)return;
+ if(curatedCommonsPhotos[title]){
+  showPhoto(img,placeholder,commonsFileUrl(curatedCommonsPhotos[title]),backup,title);
+ }else{
+  // Immediately display a photograph instead of waiting on a third-party API.
+  showPhoto(img,placeholder,backup,backup,title||fallbackArticle(key));
+ }
+ const result=await wikipediaPhoto(title);
+ if(!img.isConnected||!result||curatedCommonsPhotos[title])return;
+ // Swap in the exact landmark photo only after it has downloaded successfully.
  const probe=new Image();
- probe.onload=()=>{if(img.isConnected){img.src=result.src;img.alt='Photograph of '+result.article}};
+ probe.onload=()=>{if(img.isConnected){img.src=result.src;img.alt="Photo of "+result.article}};
  probe.src=result.src;
 }
 const calendarPhotoFiles={
@@ -327,7 +324,7 @@ function loadFirstPhoto(urls,callback){
 }
 function calendarPhotoCandidates(key){
  const file=calendarPhotoFiles[key];
- return [dayPhotos[key],dependableCityPhoto(key),onlinePhotos.amsterdam,onlinePhotos.paris,onlinePhotos.london];
+ return [file?commonsFileUrl(file):null,dayPhotos[key],dependableCityPhoto(key),onlinePhotos.paris];
 }
 async function setAccurateDayPhoto(key,element,isBackground=false){
  const candidates=calendarPhotoCandidates(key);
@@ -368,32 +365,5 @@ function drawTasks(){
 function addTask(){if(!activeKey)return;let input=document.getElementById('newTask');let s=input.value.trim();if(!s)return;(state.extra[activeKey]??=[]).push(s);save();input.value='';drawTasks()}
 function closeModal(){document.getElementById('backdrop').classList.remove('open');document.body.style.overflow='';}
 function clearProgress(){if(confirm('Clear all saved activity checkmarks, notes and custom activities on this browser?')){state={done:{},extra:{},notes:{},bookingDone:{}};save();}}
-
-// Browser image audit: ?imageAudit=1 checks all itinerary images and prints a report.
-async function auditImages(){
- const checks=[];
- Object.keys(trip).forEach(key=>{
-  calendarPhotoCandidates(key).forEach((url,i)=>{if(url)checks.push({kind:'calendar',date:key,index:i,url})});
-  trip[key].items.forEach(([time,label],i)=>{
-   const title=photoArticle(label)||fallbackArticle(key);
-   checks.push({kind:'activity fallback',date:key,index:i,url:dependableCityPhoto(key),label});
-   if(curatedCommonsPhotos[title])checks.push({kind:'landmark',date:key,index:i,url:commonsFileUrl(curatedCommonsPhotos[title]),label});
-  });
- });
- const unique=[...new Set(checks.map(x=>x.url))];
- const statuses=new Map();
- await Promise.all(unique.map(url=>new Promise(resolve=>{
-  const img=new Image();
-  img.onload=()=>{statuses.set(url,'loaded');resolve()};
-  img.onerror=()=>{statuses.set(url,'failed');resolve()};
-  img.src=url;
-  setTimeout(()=>{if(!statuses.has(url)){statuses.set(url,'timeout');resolve()}},9000);
- })));
- const failures=checks.filter(x=>statuses.get(x.url)!=='loaded');
- const report={checkedSources:unique.length,checkedUses:checks.length,workingSources:[...statuses.values()].filter(x=>x==='loaded').length,failures};
- console.table(failures);console.info('Vacation image audit',report);
- return report;
-}
-if(new URLSearchParams(location.search).has('imageAudit'))window.addEventListener('load',()=>auditImages());
 document.getElementById('backdrop').onclick=e=>{if(e.target.id==='backdrop')closeModal()};document.onkeydown=e=>{if(e.key==='Escape')closeModal()};drawWholeCalendar();
 </script></body></html>
