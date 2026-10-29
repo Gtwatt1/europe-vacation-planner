@@ -277,20 +277,12 @@ function showPhoto(img,placeholder,url,backup,label){
  img.alt="Travel photograph: "+label;
  apply(url||backup);
 }
-async function findRealPhoto(title,img,placeholder,key){
- const backup=dependableCityPhoto(key);
- if(curatedCommonsPhotos[title]){
-  showPhoto(img,placeholder,commonsFileUrl(curatedCommonsPhotos[title]),backup,title);
- }else{
-  // Immediately display a photograph instead of waiting on a third-party API.
-  showPhoto(img,placeholder,backup,backup,title||fallbackArticle(key));
- }
- const result=await wikipediaPhoto(title);
- if(!img.isConnected||!result||curatedCommonsPhotos[title])return;
- // Swap in the exact landmark photo only after it has downloaded successfully.
- const probe=new Image();
- probe.onload=()=>{if(img.isConnected){img.src=result.src;img.alt="Photo of "+result.article}};
- probe.src=result.src;
+const localTravelPhotos={"2026-11-21-0":"images/2026-11-21-0.jpg","2026-11-21-1":"images/2026-11-21-1.jpg","2026-11-21-2":"images/2026-11-21-2.jpg","2026-11-21":"images/2026-11-21.jpg","2026-11-22-0":"images/2026-11-22-0.jpg","2026-11-22-1":"images/2026-11-22-1.jpg","2026-11-22-2":"images/2026-11-22-2.jpg","2026-11-22-3":"images/2026-11-22-3.jpg","2026-11-22":"images/2026-11-22.jpg","2026-11-23-0":"images/2026-11-23-0.jpg","2026-11-23-1":"images/2026-11-23-1.jpg","2026-11-23-2":"images/2026-11-23-2.jpg","2026-11-23-3":"images/2026-11-23-3.jpg","2026-11-23":"images/2026-11-23.jpg","2026-11-24-0":"images/2026-11-24-0.jpg","2026-11-24-1":"images/2026-11-24-1.jpg","2026-11-24-2":"images/2026-11-24-2.jpg","2026-11-24-3":"images/2026-11-24-3.jpg","2026-11-24":"images/2026-11-24.jpg","2026-11-25-0":"images/2026-11-25-0.jpg","2026-11-25-1":"images/2026-11-25-1.jpg","2026-11-25-2":"images/2026-11-25-2.jpg","2026-11-25-3":"images/2026-11-25-3.jpg","2026-11-25":"images/2026-11-25.jpg","2026-11-26-0":"images/2026-11-26-0.jpg","2026-11-26-1":"images/2026-11-26-1.jpg","2026-11-26-2":"images/2026-11-26-2.jpg","2026-11-26":"images/2026-11-26.jpg","2026-11-27-0":"images/2026-11-27-0.jpg","2026-11-27-1":"images/2026-11-27-1.jpg","2026-11-27-2":"images/2026-11-27-2.jpg","2026-11-27":"images/2026-11-27.jpg","2026-11-28-0":"images/2026-11-28-0.jpg","2026-11-28-1":"images/2026-11-28-1.jpg","2026-11-28-2":"images/2026-11-28-2.jpg","2026-11-28-3":"images/2026-11-28-3.jpg","2026-11-28":"images/2026-11-28.jpg","2026-11-29-0":"images/2026-11-29-0.jpg","2026-11-29-1":"images/2026-11-29-1.jpg","2026-11-29-2":"images/2026-11-29-2.jpg","2026-11-29":"images/2026-11-29.jpg","2026-11-30-0":"images/2026-11-30-0.jpg","2026-11-30-1":"images/2026-11-30-1.jpg","2026-11-30-2":"images/2026-11-30-2.jpg","2026-11-30-3":"images/2026-11-30-3.jpg","2026-11-30":"images/2026-11-30.jpg","2026-12-01-0":"images/2026-12-01-0.jpg","2026-12-01-1":"images/2026-12-01-1.jpg","2026-12-01-2":"images/2026-12-01-2.jpg","2026-12-01-3":"images/2026-12-01-3.jpg","2026-12-01-4":"images/2026-12-01-4.jpg","2026-12-01":"images/2026-12-01.jpg","2026-12-02-0":"images/2026-12-02-0.jpg","2026-12-02-1":"images/2026-12-02-1.jpg","2026-12-02-2":"images/2026-12-02-2.jpg","2026-12-02":"images/2026-12-02.jpg","2026-12-03-0":"images/2026-12-03-0.jpg","2026-12-03-1":"images/2026-12-03-1.jpg","2026-12-03-2":"images/2026-12-03-2.jpg","2026-12-03-3":"images/2026-12-03-3.jpg","2026-12-03":"images/2026-12-03.jpg","2026-12-04-0":"images/2026-12-04-0.jpg","2026-12-04-1":"images/2026-12-04-1.jpg","2026-12-04-2":"images/2026-12-04-2.jpg","2026-12-04":"images/2026-12-04.jpg","2026-12-05-0":"images/2026-12-05-0.jpg","2026-12-05-1":"images/2026-12-05-1.jpg","2026-12-05-2":"images/2026-12-05-2.jpg","2026-12-05":"images/2026-12-05.jpg","2026-12-06-0":"images/2026-12-06-0.jpg","2026-12-06-1":"images/2026-12-06-1.jpg","2026-12-06-2":"images/2026-12-06-2.jpg","2026-12-06":"images/2026-12-06.jpg"};
+function localImage(key){return localTravelPhotos[key]||null}
+function findRealPhoto(title,img,placeholder,key,index){
+ const src=localImage(key+'-'+index)||localImage(key);
+ if(src){img.onload=()=>{img.style.display='block';placeholder.style.display='none'};img.onerror=()=>{img.style.display='none';placeholder.style.display='grid';placeholder.textContent=title||trip[key].city};img.src=src;img.alt='Travel photo: '+(title||trip[key].city);return}
+ placeholder.textContent=title||trip[key].city;
 }
 const calendarPhotoFiles={
 "2026-11-21":"Amsterdam Canal view 01.jpg",
@@ -332,18 +324,9 @@ function calendarPhotoCandidates(key){
  return [file?commonsFileUrl(file):null,dayPhotos[key],dependableCityPhoto(key),onlinePhotos.paris];
 }
 async function setAccurateDayPhoto(key,element,isBackground=false){
- const candidates=calendarPhotoCandidates(key);
- loadFirstPhoto(candidates,src=>{
-  if(!element.isConnected)return;
-  if(isBackground){
-   element.style.backgroundImage=src
-    ? 'linear-gradient(180deg,rgba(11,29,42,.18),rgba(11,29,42,.83)),url("'+src+'")'
-    : 'linear-gradient(135deg,#163c4b,#4d766d)';
-  }else{
-   if(src){element.src=src;element.style.display="block";element.alt=trip[key].city+" photograph"}
-   else element.style.display="none";
-  }
- });
+ const src=localImage(key);
+ if(isBackground){element.style.backgroundImage=src?'linear-gradient(180deg,rgba(11,29,42,.18),rgba(11,29,42,.83)),url("'+src+'")':'linear-gradient(135deg,#163c4b,#4d766d)';return}
+ if(src){element.src=src;element.style.display='block';element.alt=trip[key].city+' photograph'}else element.style.display='none';
 }
 function drawTasks(){
  const day=trip[activeKey],dateKey=activeKey,list=day.items.concat((state.extra[dateKey]||[]).map(t=>['Your addition',t]));
@@ -353,7 +336,7 @@ function drawTasks(){
   const media=document.createElement('div');media.className='journey-media';
   const placeholder=document.createElement('div');placeholder.className='journey-placeholder';placeholder.textContent=article||'Your travel day';
   const image=document.createElement('img');image.className='journey-photo';image.loading='lazy';image.alt=article?'Photo of '+article:'';
-  image.style.display='none';media.append(placeholder,image);findRealPhoto(article||fallbackArticle(dateKey),image,placeholder,dateKey);
+  image.style.display='none';media.append(placeholder,image);findRealPhoto(article||fallbackArticle(dateKey),image,placeholder,dateKey,i);
   const content=document.createElement('div');content.className='journey-copy';
   const num=document.createElement('span');num.className='journey-number';num.textContent=String(i+1).padStart(2,'0');
   const when=document.createElement('div');when.className='journey-time';when.textContent=time;
