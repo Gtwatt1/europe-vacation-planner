@@ -1,67 +1,557 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="theme-color" content="#101c27"/><title>Our European Escape · 2026</title>
-<style>
-:root{--bg:#f7f6f2;--ink:#142331;--muted:#60717c;--line:#e4e8e6;--green:#247b60;--gold:#bf7b32;--radius:18px;--shadow:0 14px 40px rgba(15,31,48,.11)}*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}button,input,textarea{font:inherit}button{cursor:pointer}.hero{position:relative;min-height:315px;background:linear-gradient(90deg,rgba(11,27,39,.92),rgba(12,30,42,.58)),url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=80') center/cover;color:white}.hero-inner{max-width:1210px;margin:auto;padding:35px 23px 38px}.eyebrow{letter-spacing:.17em;text-transform:uppercase;font-size:11px;font-weight:700;color:#b9dcd3}.hero h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(37px,6vw,71px);line-height:1.04;max-width:670px;margin:13px 0}.hero p{color:#e0e7ea;line-height:1.6;max-width:680px;margin:12px 0}.hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:21px}.hero-meta span{border:1px solid #ffffff60;border-radius:24px;padding:8px 13px;font-size:12px;background:#ffffff10}.shell{max-width:1210px;margin:-24px auto 60px;padding:0 18px;position:relative}.toolbar{display:flex;gap:15px;justify-content:space-between;align-items:center;flex-wrap:wrap;background:white;border-radius:16px;box-shadow:var(--shadow);padding:16px 20px;margin-bottom:22px}.tabs{display:flex;gap:7px;flex-wrap:wrap}.tab,.filter{border:0;border-radius:10px;background:#edf0ef;color:#41525e;padding:10px 14px;font-size:13px;font-weight:700}.tab.active,.filter.active{background:var(--ink);color:white}.legend{display:flex;flex-wrap:wrap;gap:13px;align-items:center;color:var(--muted);font-size:12px}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}.green{background:#20805c}.amber{background:#bd7a29}.gray{background:#81919b}.section-head{display:flex;align-items:end;justify-content:space-between;gap:10px;margin:23px 0 12px}.section-head h2{font:normal 30px Georgia,serif;margin:0}.section-head p{margin:0;color:var(--muted);font-size:13px}.calendar{background:white;border:1px solid var(--line);border-radius:18px;padding:13px;box-shadow:0 4px 18px #1122330a}.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}.week{padding:9px 2px;text-align:center;font-size:11px;font-weight:700;color:#82909a;text-transform:uppercase}.cell{border:1px solid transparent;background:#f5f6f4;border-radius:11px;min-height:110px;min-width:0;padding:8px;text-align:left;display:flex;flex-direction:column;gap:6px;color:var(--ink)}.cell.empty{background:transparent;pointer-events:none}.cell.past{color:#adbac1;background:#fafafa}.cell.trip{border-color:#dbe5e4;background:#f3faf8;transition:transform .15s,box-shadow .15s}.cell.trip:hover,.cell.trip:focus-visible{transform:translateY(-2px);box-shadow:0 7px 18px #16293b20;outline:2px solid #58a28b}.cell.booked{border:2px solid #308a6a;background:#eaf8f0}.cell.pending{background:#fff7ed;border-color:#f2d7b4}.day-num{font-size:13px;font-weight:800}.city{font-size:12px;font-weight:800;overflow-wrap:anywhere}.detail{font-size:10px;line-height:1.4;color:#667783;overflow-wrap:anywhere}.tag{margin-top:auto;align-self:start;display:inline-block;font-size:9px;letter-spacing:.02em;font-weight:800;padding:4px 6px;border-radius:6px;background:#e0e6ea;color:#667783}.booked .tag{background:#c3ecd5;color:#126343}.pending .tag{background:#fce3bd;color:#965a13}.content-hidden{display:none!important}.places{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:24px}.place-card{height:202px;border-radius:16px;position:relative;overflow:hidden;background:linear-gradient(135deg,#173b50,#648b87);color:white;box-shadow:0 5px 14px #0d182421}.place-card img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.place-card:hover img{transform:scale(1.05)}.place-card:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 30%,#05141bea)}.place-content{position:absolute;z-index:1;bottom:14px;left:16px;right:15px}.place-content h3{font:normal 26px Georgia,serif;margin:0}.place-content span{font-size:11px;color:#e6ecee}.list{display:grid;gap:11px}.booking{display:flex;align-items:center;justify-content:space-between;gap:15px;border:1px solid var(--line);border-radius:15px;background:white;padding:16px}.booking h3{margin:5px 0;font-size:15px}.booking small{color:var(--muted)}.status{border-radius:30px;padding:7px 10px;font-size:11px;font-weight:800;white-space:nowrap;background:#f7e8d4;color:#9e621f}.status.confirmed{background:#ddf1e5;color:#237552}.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.summary-tile{background:white;border:1px solid var(--line);padding:21px;border-radius:16px}.summary-tile b{display:block;font-size:29px;margin-bottom:5px}.summary-tile span{font-size:12px;color:var(--muted)}.muted{color:var(--muted)}.small{font-size:12px}.footnote{font-size:12px;color:var(--muted);margin:16px 3px;line-height:1.65}.btn{border:0;padding:11px 14px;border-radius:10px;background:var(--ink);color:white;font-size:13px;font-weight:700}.btn.outline{background:#edf2f0;color:#17392e}.btn.warn{background:#f6e9e1;color:#934b30}.progress-track{height:8px;background:#e9efed;border-radius:12px;overflow:hidden}.progress-fill{height:100%;background:#23815f;width:0;transition:width .25s}.modal-backdrop{position:fixed;inset:0;background:#08151fc4;z-index:30;display:none;align-items:center;justify-content:center;padding:15px}.modal-backdrop.open{display:flex}.modal{width:min(690px,100%);max-height:94dvh;background:white;border-radius:20px;overflow-y:auto;box-shadow:0 25px 90px #0007}.modal-img{width:100%;height:205px;object-fit:cover;background:linear-gradient(110deg,#25635e,#7d9c9a)}.modal-body{padding:23px}.modal-top{display:flex;align-items:start;justify-content:space-between;gap:15px}.modal h2{font:normal 34px Georgia,serif;margin:5px 0}.modal h3{font-size:15px;margin:23px 0 12px}.close{background:#eff3f3;border:0;border-radius:50%;width:35px;height:35px;font-size:20px}.item{display:flex;gap:11px;align-items:flex-start;padding:13px 2px;border-bottom:1px solid #edf0ef}.item input{width:18px;height:18px;accent-color:#257d60;margin-top:2px;flex-shrink:0}.item label{font-size:14px;line-height:1.48;cursor:pointer}.item.done label{text-decoration:line-through;color:#81919b}.item small{display:block;color:var(--muted);font-size:12px;margin-top:3px}.note{border:1px solid #dce4e3;border-radius:10px;padding:12px;width:100%;min-height:87px;resize:vertical}.addrow{display:flex;gap:8px;margin-top:11px}.addrow input{border:1px solid #dce4e3;border-radius:10px;min-width:0;flex:1;padding:11px}.links{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.links a{font-size:12px;background:#eef4f2;border-radius:9px;padding:9px;color:#20664e;text-decoration:none;font-weight:700}.alert{background:#fff7eb;border:1px solid #ecd2af;padding:12px;border-radius:12px;color:#845623;font-size:12px;line-height:1.5}.foot{max-width:1210px;margin:0 auto 35px;padding:0 20px;color:#7a8791;font-size:12px}@media(max-width:800px){.places{grid-template-columns:repeat(2,1fr)}.summary-grid{grid-template-columns:1fr 1fr}.cell{min-height:95px;padding:5px;gap:4px}.city{font-size:10px}.detail{font-size:9px}.tag{font-size:8px;padding:3px}.calendar{padding:7px}.days{gap:3px}}@media(max-width:530px){.hero{min-height:280px}.hero-inner{padding:27px 19px 38px}.hero h1{font-size:44px}.shell{padding:0 9px}.cell{min-height:86px}.day-num{font-size:11px}.city{font-size:9px}.detail{font-size:8px}.places{gap:8px}.place-card{height:155px}.place-content h3{font-size:22px}.summary-grid{grid-template-columns:1fr}.booking{align-items:start}.toolbar{padding:12px}}
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f1b28" />
+  <title>Europe Vacation Hub · 2026</title>
+  <style>
+    :root{
+      --bg:#f4f1eb;--panel:#ffffff;--soft:#eef3f5;--ink:#172734;--muted:#5e6d79;--line:#d8e1e6;
+      --accent:#1b6f8d;--accent-2:#db8f43;--green:#2d7b5b;--danger:#b95b4c;--shadow:0 18px 45px rgba(23,39,52,.12);--radius:22px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;background:linear-gradient(180deg,#f6f3ed 0%,#f6f7fb 45%,#f2f6f8 100%);color:var(--ink)}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .topbar{position:sticky;top:0;z-index:40;backdrop-filter:blur(16px);background:rgba(244,241,235,.86);border-bottom:1px solid rgba(216,225,230,.7)}
+    .topbar-inner{max-width:1240px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800}
+    .brand-badge{width:42px;height:42px;border-radius:14px;background:linear-gradient(145deg,#1c6683,#de8d45);display:grid;place-items:center;color:#fff;font-size:22px;box-shadow:var(--shadow)}
+    .nav{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .nav a{padding:10px 14px;border-radius:999px;font-size:13px;font-weight:700;color:#314250}
+    .nav a:hover{background:#fff}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(110deg,rgba(8,20,29,.9),rgba(18,52,72,.55)),url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=80') center/cover;min-height:620px;color:#fff}
+    .hero::after{content:"";position:absolute;inset:auto -8% -20% auto;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,#ffffff40,transparent 70%)}
+    .hero-inner{max-width:1240px;margin:auto;padding:88px 20px 84px;position:relative;display:grid;grid-template-columns:1.2fr .88fr;gap:28px;align-items:end}
+    .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:12px;font-weight:800;color:#bfd9e3}
+    h1{font-family:Georgia,serif;font-weight:400;font-size:clamp(40px,6vw,78px);line-height:1.02;margin:14px 0 16px;max-width:760px}
+    .lead{font-size:18px;line-height:1.7;max-width:730px;color:#e4edf2}
+    .hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 26px}
+    .hero-pills span{padding:10px 14px;border:1px solid #ffffff42;border-radius:999px;background:#ffffff12;font-size:13px;font-weight:700}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:14px;font-weight:800;font-size:14px;border:1px solid transparent;transition:.2s ease}
+    .btn-primary{background:#fff;color:#10202e}
+    .btn-secondary{border-color:#ffffff55;color:#fff;background:#ffffff10}
+    .btn:hover{transform:translateY(-1px)}
+    .dashboard-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.15);box-shadow:var(--shadow);border-radius:28px;padding:22px}
+    .dashboard-card h2{margin:0 0 14px;font-size:20px}
+    .hero-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:14px}
+    .mini-stat{background:rgba(255,255,255,.12);padding:16px;border-radius:18px}
+    .mini-stat small{display:block;color:#cfe0e8;text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:800}
+    .mini-stat strong{display:block;margin-top:7px;font-size:29px}
+    .mini-stat span{display:block;margin-top:4px;color:#dce8ee;font-size:13px}
+    .countdown{padding:14px 16px;border-radius:18px;background:#ffffff12}
+    .countdown strong{display:block;font-size:30px;margin-top:6px}
+    .shell{max-width:1240px;margin:-42px auto 70px;padding:0 20px;position:relative}
+    .route-strip{background:var(--panel);border-radius:24px;box-shadow:var(--shadow);padding:18px 20px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-bottom:24px}
+    .route-strip .chip{background:var(--soft);padding:10px 13px;border-radius:999px;font-size:13px;font-weight:800;color:#30414d}
+    .route-arrow{color:#8da0ad;font-weight:900}
+    .section{margin-top:22px;background:var(--panel);border-radius:28px;box-shadow:var(--shadow);padding:26px}
+    .section h2{font-family:Georgia,serif;font-weight:500;font-size:34px;margin:0 0 10px}
+    .section-sub{color:var(--muted);margin:0 0 20px;line-height:1.6}
+    .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .stat-card{background:linear-gradient(180deg,#fafcff,#f1f6f8);border:1px solid var(--line);padding:18px;border-radius:20px}
+    .stat-card small{text-transform:uppercase;letter-spacing:.16em;font-size:10px;font-weight:800;color:#738391}
+    .stat-card strong{display:block;margin-top:10px;font-size:32px}
+    .stat-card span{display:block;margin-top:6px;color:var(--muted);font-size:14px;line-height:1.5}
+    .city-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .city-card{overflow:hidden;border-radius:24px;background:#fff;border:1px solid var(--line);display:flex;flex-direction:column}
+    .city-card img{height:220px;object-fit:cover}
+    .city-card .content{padding:16px 16px 18px}
+    .city-card h3{margin:0;font-size:24px}
+    .tagline{display:inline-block;margin-top:6px;color:var(--accent);font-weight:800;font-size:13px}
+    .blurb{color:var(--muted);font-size:14px;line-height:1.6;margin:12px 0 14px}
+    .bullets{display:flex;flex-wrap:wrap;gap:8px}
+    .bullets span{background:var(--soft);border-radius:999px;padding:8px 10px;font-size:12px;font-weight:700;color:#40515d}
+    .itinerary-toolbar{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+    .filter-row{display:flex;flex-wrap:wrap;gap:8px}
+    .filter-btn{border:none;background:var(--soft);color:#3c4d59;padding:10px 14px;border-radius:999px;font-weight:800;font-size:13px;cursor:pointer}
+    .filter-btn.active{background:var(--ink);color:#fff}
+    .timeline-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .day-card{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column;min-height:100%}
+    .day-card .image-wrap{position:relative}
+    .day-card img{height:190px;object-fit:cover;width:100%}
+    .status-badge{position:absolute;left:14px;top:14px;padding:8px 11px;border-radius:999px;font-size:11px;font-weight:900;letter-spacing:.1em;text-transform:uppercase;background:#fff;color:#21313e}
+    .status-badge.booked{background:#e5f6ee;color:#1c6b4c}
+    .status-badge.pending{background:#fff3df;color:#9a6319}
+    .status-badge.planned{background:#ebf2f7;color:#355062}
+    .day-card .body{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
+    .day-meta{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}
+    .day-meta small{display:block;text-transform:uppercase;letter-spacing:.14em;font-size:10px;font-weight:800;color:#8a99a5}
+    .day-meta h3{margin:4px 0 0;font-size:21px;line-height:1.25}
+    .day-city{font-size:13px;color:var(--accent);font-weight:800}
+    .day-desc{font-size:14px;line-height:1.6;color:var(--muted)}
+    .day-actions{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px}
+    .inline-link{font-size:13px;font-weight:800;color:var(--accent)}
+    .open-btn{padding:11px 14px;border-radius:14px;border:none;background:var(--ink);color:#fff;font-weight:800;cursor:pointer}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .panel{background:#fbfdfe;border:1px solid var(--line);border-radius:22px;padding:18px}
+    .panel h3{margin:0 0 12px;font-size:22px}
+    .booking-list,.checklist-list,.packing-grid,.guide-grid,.links-grid{display:grid;gap:12px}
+    .booking-item,.check-item,.resource-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px 16px}
+    .booking-item{display:flex;justify-content:space-between;align-items:center;gap:14px}
+    .booking-item small,.check-item small,.resource-card small{display:block;color:#8c99a4}
+    .booking-item h4,.resource-card h4{margin:4px 0 5px;font-size:18px}
+    .status-pill{border-radius:999px;padding:9px 11px;font-size:12px;font-weight:800;white-space:nowrap}
+    .status-pill.confirmed{background:#e5f6ee;color:#1d724f}
+    .status-pill.pending{background:#fff3df;color:#8f5a18}
+    .check-item label{display:flex;align-items:flex-start;gap:12px;cursor:pointer}
+    .check-item input{margin-top:2px;transform:scale(1.15)}
+    .packing-grid{grid-template-columns:repeat(2,1fr)}
+    .packing-panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:16px}
+    .packing-panel h4{margin:0 0 12px}
+    .packing-panel label{display:flex;gap:10px;align-items:flex-start;padding:8px 0;color:#314250}
+    .guide-grid{grid-template-columns:repeat(2,1fr)}
+    .guide-card{overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:24px;display:flex;flex-direction:column}
+    .guide-card img{height:220px;object-fit:cover}
+    .guide-content{padding:18px}
+    .guide-meta{display:flex;justify-content:space-between;gap:10px;align-items:center}
+    .guide-content h3{margin:0;font-size:26px}
+    .guide-content p{color:var(--muted);line-height:1.6}
+    .guide-columns{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+    .guide-columns strong{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#81909d;margin-bottom:8px}
+    .guide-columns ul{margin:0;padding-left:18px;color:#324552;line-height:1.7;font-size:14px}
+    .guide-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+    .guide-links a,.resource-links a,.day-links a{padding:10px 12px;border-radius:999px;background:var(--soft);font-size:13px;font-weight:800;color:#355062}
+    .notes-area{width:100%;min-height:180px;padding:14px 16px;border-radius:18px;border:1px solid var(--line);font:inherit;line-height:1.6;resize:vertical;background:#fff}
+    .resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .resource-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .privacy-note{border-left:4px solid var(--accent-2);background:#fff8ef;padding:14px 16px;border-radius:16px;color:#6b4e2f;line-height:1.6;font-size:14px}
+    .footer{padding:26px 20px 60px;text-align:center;color:#6e7a85}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(7,19,29,.6);display:none;align-items:center;justify-content:center;padding:18px;z-index:100}
+    .modal-backdrop.open{display:flex}
+    .modal{width:min(980px,100%);max-height:92vh;overflow:auto;background:#fff;border-radius:26px;box-shadow:0 40px 80px rgba(0,0,0,.24)}
+    .modal-hero{position:relative}
+    .modal-hero img{height:280px;width:100%;object-fit:cover;border-radius:26px 26px 0 0}
+    .modal-close{position:absolute;top:16px;right:16px;width:42px;height:42px;border:none;border-radius:50%;background:rgba(255,255,255,.9);font-size:20px;font-weight:900;cursor:pointer}
+    .modal-body{padding:24px}
+    .modal-header small{display:block;text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:#7d8b96;font-weight:800}
+    .modal-header h3{margin:8px 0 6px;font-size:34px}
+    .modal-sub{color:var(--muted);font-size:16px;line-height:1.6}
+    .alert{margin-top:16px;padding:14px 16px;border-radius:18px;background:#eef6fb;color:#24506a;line-height:1.6}
+    .modal-layout{display:grid;grid-template-columns:1.05fr .95fr;gap:18px;margin-top:20px}
+    .task-list{display:grid;gap:10px}
+    .task-item{display:flex;gap:12px;align-items:flex-start;background:#f8fbfd;border:1px solid var(--line);padding:14px;border-radius:18px}
+    .task-item.done{opacity:.66}
+    .task-item label{flex:1;cursor:pointer;line-height:1.55}
+    .task-item small{display:block;color:#83919c;margin-top:4px}
+    .task-add{display:flex;gap:10px;margin-top:12px}
+    .task-add input{flex:1;padding:12px 14px;border-radius:14px;border:1px solid var(--line);font:inherit}
+    .task-add button{padding:12px 14px;border-radius:14px;border:none;background:var(--accent);color:#fff;font-weight:800;cursor:pointer}
+    .modal-side .panel{height:100%}
+    .day-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+    .tiny{font-size:13px;color:#6f7c87}
+    @media (max-width:1100px){
+      .hero-inner,.modal-layout{grid-template-columns:1fr}
+      .stats-row,.city-grid,.timeline-grid,.resource-grid{grid-template-columns:repeat(2,1fr)}
+      .guide-grid{grid-template-columns:1fr}
+    }
+    @media (max-width:760px){
+      .topbar-inner{align-items:flex-start;flex-direction:column}
+      .hero{min-height:auto}
+      .hero-inner{padding-top:64px}
+      .stats-row,.city-grid,.timeline-grid,.two-col,.packing-grid,.resource-grid{grid-template-columns:1fr}
+      .guide-columns{grid-template-columns:1fr}
+      h1{font-size:44px}
+      .section{padding:20px}
+      .nav{gap:6px}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand"><div class="brand-badge">✈</div><div><div>Europe Vacation Hub</div><small style="color:#71808c;font-weight:700">One place for the full trip</small></div></div>
+      <nav class="nav">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#itinerary">Itinerary</a>
+        <a href="#logistics">Logistics</a>
+        <a href="#packing">Packing</a>
+        <a href="#guides">Guides</a>
+        <a href="#notes">Notes</a>
+      </nav>
+    </div>
+  </div>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">Toronto · Amsterdam · Paris · London · Newcastle</div>
+        <h1>Your Europe trip, upgraded into a proper travel hub.</h1>
+        <p class="lead">A visual one-stop planner for your 2026 vacation—daily itinerary, destination inspiration, bookings, prep checklists, packing help, quick links and personal notes, all in one place.</p>
+        <div class="hero-pills">
+          <span>Nov 21 – Dec 6, 2026</span>
+          <span>2 adults</span>
+          <span>16 travel days</span>
+          <span>4 core cities + 2 optional day trips</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#itinerary">Open itinerary</a>
+          <a class="btn btn-secondary" href="#logistics">Jump to trip hub</a>
+        </div>
+      </div>
+      <aside class="dashboard-card">
+        <h2>At-a-glance travel board</h2>
+        <div class="hero-grid">
+          <div class="mini-stat"><small>Confirmed transport</small><strong id="heroBooked">0</strong><span>legs already booked</span></div>
+          <div class="mini-stat"><small>Still to book</small><strong id="heroPending">0</strong><span>transport / trip items pending</span></div>
+          <div class="mini-stat"><small>Core stops</small><strong>4</strong><span>Amsterdam, Paris, London, Newcastle</span></div>
+          <div class="mini-stat"><small>Optional detours</small><strong>2</strong><span>Antwerp & Strasbourg</span></div>
+        </div>
+        <div class="countdown"><small style="text-transform:uppercase;letter-spacing:.16em;font-size:10px;font-weight:800;color:#d6e5ed">Countdown to departure</small><strong id="countdownText">Loading…</strong><span id="countdownSub" style="color:#dce7ec;font-size:14px;display:block;margin-top:6px">Trip starts with the overnight flight from Toronto.</span></div>
+      </aside>
+    </div>
+  </header>
 
-.place-card img,.modal-img{background:#e7edec;display:block;object-fit:cover}
-.place-card{overflow:hidden}
-.photo-notice{font-size:11px;color:#63727b;margin-top:8px}
-</style></head>
-<body><header class="hero"><div class="hero-inner"><div class="eyebrow">Our winter escape · 2026</div><h1>Four countries.<br>One beautiful journey.</h1><p>A personal trip planner for Amsterdam, Belgium, Paris, London and Newcastle. Tap any date to see the plan, check off experiences and add your own ideas.</p><div class="hero-meta"><span>✈ 21 Nov – 6 Dec</span><span>♡ Two travellers</span><span>🌙 14 nights in Europe</span><span>✓ Confirmed travel tracked</span></div></div></header>
-<main class="shell"><div class="toolbar"><nav class="tabs" aria-label="Views"><button class="tab active" data-view="calendar">Calendar</button><button class="tab" data-view="bookings">Bookings & to-dos</button><button class="tab" data-view="overview">Trip overview</button></nav><div class="legend"><span><i class="dot green"></i> Booked</span><span><i class="dot amber"></i> To book</span><span><i class="dot gray"></i> Proposed</span></div></div>
-<section id="calendar-view"><div class="section-head"><h2>November 2026</h2><p>Amsterdam → Paris</p></div><div class="calendar"><div id="nov" class="days"></div></div><div class="section-head"><h2>December 2026</h2><p>London → Newcastle → Toronto</p></div><div class="calendar"><div id="dec" class="days"></div></div><div class="section-head"><h2>Our destinations</h2><p>Tap a calendar date for the full plan</p></div><div class="places" id="places"></div><p class="footnote">Green highlights refer to confirmed transport, not confirmed sightseeing or hotels. Planned times are suggestions. All departure and arrival times are local to their station or airport.</p></section>
-<section id="bookings-view" class="content-hidden"><div class="section-head"><h2>Transport & reservations</h2><p>What is booked and what is next</p></div><div class="list" id="bookings"></div><div class="section-head"><h2>Booking checklist</h2></div><div class="list" id="book-checklist"></div></section>
-<section id="overview-view" class="content-hidden"><div class="section-head"><h2>The journey at a glance</h2></div><div class="summary-grid"><div class="summary-tile"><b>14</b><span>Hotel nights to arrange</span></div><div class="summary-tile"><b>4</b><span>Confirmed transport bookings</span></div><div class="summary-tile"><b id="doneTotal">0</b><span>Activities completed</span></div></div><div class="section-head"><h2>By home base</h2></div><div class="list" id="stays"></div><div class="section-head"><h2>Activity progress</h2></div><div class="summary-tile"><p class="small muted" id="progressLabel">0 experiences completed</p><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><p class="footnote">Your activity checkmarks, extra plans and notes are stored in this browser only. They are not synced across devices.</p><button class="btn warn" onclick="clearProgress()">Clear my saved checklist and notes</button></div></section></main>
-<footer class="foot">Made for your November–December 2026 European trip · Works on phone and desktop · Photos are included for offline viewing · No bookings are created by this website.</footer>
-<div id="backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-label="Day itinerary"><div class="modal"><img class="modal-img" id="modalPhoto" alt="Destination photograph" loading="eager"><div class="modal-body"><div class="modal-top"><div><div class="eyebrow" id="modalDate" style="color:#43816d"></div><h2 id="modalTitle"></h2><div class="muted small" id="modalSub"></div></div><button class="close" aria-label="Close day" onclick="closeModal()">×</button></div><div id="modalAlert" style="margin-top:15px"></div><h3>Today's plan <span class="muted small" id="taskCount"></span></h3><div id="tasks"></div><div class="addrow"><input id="newTask" placeholder="Add an activity or idea" aria-label="Add activity"><button class="btn" id="addBtn">Add</button></div><h3>Notes for this day</h3><textarea class="note" id="dayNotes" placeholder="Restaurants to try, activity ideas, reminders..."></textarea><div class="links" id="modalLinks"></div></div></div></div>
-<script>
-const onlinePhotos={
- amsterdam:'https://images.unsplash.com/photo-1534351590666-13e3e3a6be4e?auto=format&fit=crop&w=1200&q=80',
- paris:'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80',
- london:'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1200&q=80',
- antwerp:'https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1200&q=80',
- strasbourg:'https://images.unsplash.com/photo-1482517967863-00e15c9b44be?auto=format&fit=crop&w=1200&q=80',
- newcastle:'https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1200&q=80',
- versailles:'https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80'
-};
-function setTravelPhoto(el,key){
- el.onerror=()=>{el.onerror=null;el.style.display='none';};
- el.style.display='block';
- el.src=onlinePhotos[key]||onlinePhotos.paris;
-}
-const D=(day,city,desc,status,items,extra={})=>({day,city,desc,status,items,...extra});
-const trip={
-'2026-11-21':D(21,'Toronto → Amsterdam','Outbound flight · Departs 21:45','booked',[['Before departure','Check passports, visas, travel insurance and baggage allowances'],['Airport','Arrive early for international check-in'],['21:45','Depart Toronto Pearson for Amsterdam, connecting via London Heathrow']],{photo:'amsterdam',travel:'Booked outbound flight. Toronto departure 21:45 on Sat 21 Nov; Amsterdam arrival 14:05 on Sun 22 Nov.'}),
-'2026-11-22':D(22,'Amsterdam','Arrive 14:05 · Old town & canals','booked',[['14:05','Land in Amsterdam (confirmed flight)'],['Late afternoon','Airport transfer, hotel check-in and a short rest'],['Early evening','Walk through Dam Square and the historic canal ring'],['Dinner','Eat in central Amsterdam; keep the first evening flexible']],{photo:'amsterdam',travel:'Flight arrival confirmed 14:05. Remaining activities are suggestions.'}),
-'2026-11-23':D(23,'Amsterdam','Museums · De Pijp · Jordaan · canal cruise','planned',[['Morning','Rijksmuseum (reserve admission if visiting)'],['Late morning / afternoon','Van Gogh Museum OR Anne Frank House if tickets available — avoid rushing all three'],['Afternoon','Explore De Pijp, Albert Cuyp Market and Jordaan / Nine Streets'],['Evening','Canal cruise and Dutch-Indonesian rijsttafel dinner']],{photo:'amsterdam',links:[['Rijksmuseum','https://www.rijksmuseum.nl/en'],['Anne Frank tickets','https://www.annefrank.org/en/museum/tickets/']]}),
-'2026-11-24':D(24,'Antwerp, Belgium','Proposed day trip from Amsterdam','pending',[['Morning','Train Amsterdam ↔ Antwerp (not booked)'],['Morning','See Antwerp Central Station and cathedral'],['Afternoon','Grote Markt, old-town walks, Belgian food and chocolate'],['Evening','Return to Amsterdam for the night']],{photo:'antwerp',travel:'Proposed round-trip day train; exact departures TBD.',links:[['NS International','https://www.nsinternational.com/en']]}),
-'2026-11-25':D(25,'Amsterdam → Paris','Eurostar · 18:10–21:41','booked',[['Morning','Have breakfast and walk around Nine Streets / Jordaan'],['Afternoon','Collect bags and head to Amsterdam Centraal in good time'],['18:10','Depart Amsterdam Centraal — Eurostar Standard (booked)'],['21:41','Arrive Paris Gare du Nord; travel to hotel and check in']],{photo:'paris',travel:'Confirmed Eurostar Standard: Amsterdam Centraal 18:10 → Paris Gare du Nord 21:41, 3h 31m.'}),
-'2026-11-26':D(26,'Paris','Eiffel Tower · Arc de Triomphe · Seine','planned',[['Morning','Trocadéro views and Eiffel Tower (allow extra time if climbing)'],['Afternoon','Champs-Élysées, Arc de Triomphe and café stops'],['Evening','Seine river cruise and dinner by the river']],{photo:'paris',links:[['Eiffel Tower','https://ticket.toureiffel.paris/en']]}),
-'2026-11-27':D(27,'Paris','Louvre · Tuileries · Montmartre','planned',[['Morning','Louvre Museum — 3 hours or more if you love art'],['Afternoon','Tuileries Garden and lunch, then Montmartre'],['Evening','Sacré-Cœur sunset view, local restaurants, possible jazz / cabaret']],{photo:'paris',links:[['Louvre','https://www.louvre.fr/en']]}),
-'2026-11-28':D(28,'Paris','Palais Garnier · Galeries Lafayette · Le Marais','planned',[['Morning','Tour Palais Garnier opera house if open for visits'],['Afternoon','Galeries Lafayette rooftop, shopping and Paris food stops'],['Late afternoon','Le Marais boutiques, Place des Vosges and cafés'],['Evening','Optional wine bar, jazz night or relaxed dinner']],{photo:'paris'}),
-'2026-11-29':D(29,'Versailles + Paris','Palace · gardens · evening in Paris','planned',[['Morning','Train to Palace of Versailles; timed-entry palace visit'],['Afternoon','Gardens / estate as weather permits and lunch'],['Evening','Return to Paris for dinner — or swap Versailles for Musée d’Orsay if tired']],{photo:'versailles',links:[['Versailles official','https://en.chateauversailles.fr/']]}),
-'2026-11-30':D(30,'Strasbourg','Christmas markets · Petite France','pending',[['Early morning','TGV from Paris to Strasbourg (not booked)'],['Late morning','Strasbourg Cathedral and historic centre'],['Afternoon','Petite France, bridges and Alsatian food'],['Evening','Christmas-market lights; return TGV to Paris (not booked)']],{photo:'strasbourg',travel:'Day trip proposed; check exact return times and prices before booking.',links:[['SNCF Connect','https://www.sncf-connect.com/en-en/']]}),
-'2026-12-01':D(1,'Paris → London','Eurostar · 13:09–14:30','booked',[['Late morning','Arrive Gare du Nord early for border and security checks'],['13:09','Depart Paris Gare du Nord (confirmed Eurostar)'],['14:30','Arrive London St Pancras (London local time)'],['Late afternoon','Hotel check-in and Covent Garden Christmas decorations'],['Evening','Explore Soho / Chinatown; dinner or optional West End show']],{photo:'london',travel:'Eurostar train booked. Check your private confirmation email for ticket and passenger details.',links:[['Eurostar','https://www.eurostar.com/']]}),
-'2026-12-02':D(2,'London','Westminster · Buckingham Palace · London Eye','planned',[['Morning','Westminster Abbey, Big Ben and Houses of Parliament'],['Afternoon','Walk through St James’s Park to Buckingham Palace'],['Evening','London Eye or South Bank riverside walk and festive lights']],{photo:'london'}),
-'2026-12-03':D(3,'London','Tower of London · Borough Market · Sky Garden','planned',[['Morning','Tower of London and Tower Bridge'],['Afternoon','Borough Market food tasting and the South Bank'],['Late afternoon','Sky Garden (free ticket reservation if available)'],['Evening','Regent Street lights or a West End performance']],{photo:'london',links:[['Sky Garden','https://skygarden.london/']]}),
-'2026-12-04':D(4,'London → Newcastle','Morning train · Quayside · city centre','pending',[['Morning','Direct train from London King’s Cross to Newcastle (not booked)'],['Afternoon','Hotel check-in; walk Newcastle Quayside and Millennium Bridge'],['Evening','Dinner in Newcastle and explore the city centre']],{photo:'newcastle',travel:'Proposed morning LNER/Lumo train. Times and fare not confirmed.',links:[['Compare LNER','https://www.lner.co.uk/'],['Compare Lumo','https://www.lumo.co.uk/']]}),
-'2026-12-05':D(5,'Newcastle → London','Newcastle daytime · evening train','pending',[['Morning','Relaxed breakfast and more Newcastle sightseeing'],['Afternoon','Optional Tynemouth coast, weather and train times permitting'],['Evening','Direct train back to London (not booked); stay in London near a convenient Heathrow connection']],{photo:'newcastle',travel:'Evening Newcastle–London train not yet booked. Important: Heathrow flight is 11:45 tomorrow.'}),
-'2026-12-06':D(6,'London → Toronto','Flight 11:45–19:15','booked',[['Early morning','Transfer to Heathrow; allow ~3 hours before international departure'],['11:45','Depart London Heathrow (confirmed return itinerary)'],['19:15','Arrive Toronto Pearson (confirmed return itinerary)']],{photo:'london',travel:'Booked return flight itinerary: depart LHR 11:45, arrive YYZ 19:15 local time, via Amsterdam.'})
-};
-const stays=[['Amsterdam','Nov 22–25','3 nights'],['Paris','Nov 25–Dec 1','6 nights'],['London','Dec 1–4','3 nights'],['Newcastle','Dec 4–5','1 night'],['London','Dec 5–6','1 night']];
-const bookings=[['Nov 21–22','Toronto → Amsterdam flight','21:45 departure · 14:05 arrival','confirmed'],['Nov 25','Amsterdam → Paris Eurostar','18:10–21:41 · Standard','confirmed'],['Dec 1','Paris → London Eurostar','13:09–14:30 · Standard','confirmed'],['Dec 6','London → Toronto flight','11:45–19:15 · via Amsterdam','confirmed'],['Nov 24','Amsterdam ↔ Antwerp','Day-trip trains, 2 adults','pending'],['Nov 30','Paris ↔ Strasbourg','TGV day-trip trains, 2 adults','pending'],['Dec 4','London → Newcastle','Morning LNER/Lumo, 2 adults','pending'],['Dec 5','Newcastle → London','Evening LNER/Lumo, 2 adults','pending']];
-const checkTasks=['Book accommodation: Amsterdam (3 nights)','Book accommodation: Paris (6 nights)','Book accommodation: London (3 nights Dec 1–4)','Book accommodation: Newcastle (1 night)','Book accommodation: London (1 night Dec 5)','Book Antwerp return train, if keeping the day trip','Book Strasbourg return TGV','Book London → Newcastle train','Book Newcastle → London evening train','Complete Eurostar UK Advance Passenger Information','Check visas, UK entry and border documentation','Book major attractions (Anne Frank, Louvre, Eiffel, Versailles)','Consider travel insurance and baggage allowances'];
-let state={};try{state=JSON.parse(localStorage.getItem('europe-escape-v1')||'{}')}catch(e){};state.done??={};state.extra??={};state.notes??={};state.bookingDone??={};const save=()=>{try{localStorage.setItem('europe-escape-v1',JSON.stringify(state))}catch(e){}};
-const weekday=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];const dateFmt=(key)=>new Date(key+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
-function drawCalendar(id,month,startDay,endDay){let root=document.getElementById(id);root.innerHTML='';weekday.forEach(w=>{let el=document.createElement('div');el.className='week';el.textContent=w;root.appendChild(el)});const firstOffset=new Date(`2026-${month}-${String(startDay).padStart(2,'0')}T12:00:00`).getDay();const count=endDay-startDay+1;const slots=Math.ceil((firstOffset+count)/7)*7;for(let idx=0;idx<slots;idx++){const d=startDay+idx-firstOffset;let btn=document.createElement('button');if(d<startDay||d>endDay){btn.className='cell empty';btn.disabled=true;root.appendChild(btn);continue;}const key=`2026-${month}-${String(d).padStart(2,'0')}`,day=trip[key];btn.className='cell '+(day?'trip '+(day.status==='booked'?'booked':day.status==='pending'?'pending':''):'past');btn.innerHTML=`<span class="day-num">${d}</span>${day?`<span class="city">${day.city}</span><span class="detail">${day.desc}</span><span class="tag">${day.status==='booked'?'✓ BOOKED':day.status==='pending'?'TO BOOK':'PLANNED'}</span>`:''}`;if(day){btn.title=`Open ${dateFmt(key)}`;btn.onclick=()=>openDay(key)}else btn.disabled=true;root.appendChild(btn)}}
-function drawPlaces(){const a=[['Amsterdam','3 nights','amsterdam'],['Paris','6 nights','paris'],['London','4 nights','london'],['Newcastle','1 night','newcastle']];document.getElementById('places').innerHTML=a.map(([title,n,img])=>`<div class="place-card"><img src="${onlinePhotos[img]||onlinePhotos.paris}" alt="${title} travel photograph" loading="lazy" onerror="this.style.display='none'"><div class="place-content"><h3>${title}</h3><span>${n}</span></div></div>`).join('')}
-function drawBookings(){document.getElementById('bookings').innerHTML=bookings.map(([date,title,desc,st])=>`<div class="booking"><div><small>${date}</small><h3>${title}</h3><small>${desc}</small></div><span class="status ${st}">${st==='confirmed'?'✓ Booked':'To book'}</span></div>`).join('');const root=document.getElementById('book-checklist');root.innerHTML='';checkTasks.forEach((s,i)=>{let row=document.createElement('div');row.className='booking';let label=document.createElement('label');label.className='small';let input=document.createElement('input');input.type='checkbox';input.style.marginRight='10px';input.checked=!!state.bookingDone[i];input.onchange=()=>{state.bookingDone[i]=input.checked;save()};label.append(input,document.createTextNode(s));row.append(label);root.append(row)})}
-function drawOverview(){document.getElementById('stays').innerHTML=stays.map(([c,d,n])=>`<div class="booking"><div><small>${d}</small><h3>${c}</h3></div><span class="status">${n}</span></div>`).join('');let total=0,done=0;Object.entries(trip).forEach(([key,day])=>{let arr=day.items.concat((state.extra[key]||[]).map(t=>['Custom',t]));arr.forEach((_,i)=>{total++;if(state.done[key+'-'+i])done++})});document.getElementById('doneTotal').textContent=done;document.getElementById('progressLabel').textContent=`${done} of ${total} activities completed`;document.getElementById('progressFill').style.width=(total?done/total*100:0)+'%'}
-let activeKey=null;const safe=(s)=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function openDay(key){activeKey=key;const d=trip[key];setTravelPhoto(document.getElementById('modalPhoto'),d.photo);document.getElementById('modalPhoto').alt=d.city+' travel photograph';document.getElementById('modalDate').textContent=dateFmt(key);document.getElementById('modalTitle').textContent=d.city;document.getElementById('modalSub').textContent=d.desc;document.getElementById('modalAlert').innerHTML=d.travel?`<div class="alert">${safe(d.travel)}</div>`:'';document.getElementById('dayNotes').value=state.notes[key]||'';document.getElementById('newTask').value='';document.getElementById('modalLinks').innerHTML=(d.links||[]).map(([t,l])=>`<a href="${l}" target="_blank" rel="noopener noreferrer">${safe(t)} ↗</a>`).join('');drawTasks();document.getElementById('backdrop').classList.add('open');document.body.style.overflow='hidden'}
-function drawTasks(){const d=trip[activeKey];let list=d.items.concat((state.extra[activeKey]||[]).map(t=>['Added by you',t]));const root=document.getElementById('tasks');root.innerHTML='';let n=0;list.forEach(([time,label],i)=>{const id=activeKey+'-'+i;const row=document.createElement('div');row.className='item'+(state.done[id]?' done':'');let check=document.createElement('input');check.type='checkbox';check.checked=!!state.done[id];check.id='check'+i;check.onchange=()=>{state.done[id]=check.checked;save();drawTasks()};let lab=document.createElement('label');lab.htmlFor='check'+i;lab.innerHTML=`${safe(label)}<small>${safe(time)}</small>`;row.append(check,lab);root.append(row);if(check.checked)n++});document.getElementById('taskCount').textContent=`(${n}/${list.length} done)`}
-function addTask(){if(!activeKey)return;let input=document.getElementById('newTask');let s=input.value.trim();if(!s)return;(state.extra[activeKey]??=[]).push(s);save();input.value='';drawTasks()}
-function closeModal(){document.getElementById('backdrop').classList.remove('open');document.body.style.overflow='';drawOverview()}
-function clearProgress(){if(confirm('Clear all saved activity checkmarks, notes and custom activities on this browser?')){state={done:{},extra:{},notes:{},bookingDone:{}};save();drawBookings();drawOverview()}}
-document.querySelectorAll('.tab').forEach(el=>el.onclick=()=>{document.querySelectorAll('.tab').forEach(x=>x.classList.toggle('active',x===el));['calendar','bookings','overview'].forEach(v=>document.getElementById(v+'-view').classList.toggle('content-hidden',v!==el.dataset.view));if(el.dataset.view==='overview')drawOverview()});document.getElementById('dayNotes').oninput=e=>{if(activeKey){state.notes[activeKey]=e.target.value;save()}};document.getElementById('addBtn').onclick=addTask;document.getElementById('newTask').onkeydown=e=>{if(e.key==='Enter')addTask()};document.getElementById('backdrop').onclick=e=>{if(e.target.id==='backdrop')closeModal()};document.onkeydown=e=>{if(e.key==='Escape')closeModal()};drawCalendar('nov','11',21,30);drawCalendar('dec','12',1,6);drawPlaces();drawBookings();drawOverview();
-</script></body></html>
+  <main class="shell">
+    <div class="route-strip" aria-label="trip route">
+      <strong style="margin-right:4px">Route:</strong>
+      <div id="routeChips" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px"></div>
+    </div>
+
+    <section class="section" id="dashboard">
+      <h2>Trip dashboard</h2>
+      <p class="section-sub">This keeps the high-level picture front and centre so you can quickly see how the trip is shaping up.</p>
+      <div class="stats-row">
+        <div class="stat-card"><small>Trip length</small><strong>16</strong><span>calendar days from first departure to final arrival home.</span></div>
+        <div class="stat-card"><small>Booked travel legs</small><strong id="statBooked">0</strong><span>confirmed transport items already in place.</span></div>
+        <div class="stat-card"><small>Pending logistics</small><strong id="statPending">0</strong><span>transport or logistics entries still awaiting action.</span></div>
+        <div class="stat-card"><small>Trip progress</small><strong id="progressCount">0%</strong><span id="progressSub">Activity progress is tracked from your checkmarks below.</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="destinations">
+      <h2>Destination moodboard</h2>
+      <p class="section-sub">A quick visual feel for each main stop, so the planner feels more like the trip itself and less like a spreadsheet.</p>
+      <div class="city-grid" id="cityGrid"></div>
+    </section>
+
+    <section class="section" id="itinerary">
+      <div class="itinerary-toolbar">
+        <div>
+          <h2 style="margin-bottom:6px">Daily itinerary</h2>
+          <p class="section-sub" style="margin:0">Open any day to see the plan, links, your checklist progress and personal notes.</p>
+        </div>
+        <div class="filter-row">
+          <button class="filter-btn active" data-filter="all">All days</button>
+          <button class="filter-btn" data-filter="booked">Booked</button>
+          <button class="filter-btn" data-filter="planned">Planned</button>
+          <button class="filter-btn" data-filter="pending">Pending</button>
+        </div>
+      </div>
+      <div class="timeline-grid" id="timelineGrid"></div>
+    </section>
+
+    <section class="section" id="logistics">
+      <h2>Bookings & logistics</h2>
+      <p class="section-sub">Your transport picture, plus a trip-prep checklist you can tick off as you go.</p>
+      <div class="two-col">
+        <div class="panel">
+          <h3>Transport & booking status</h3>
+          <div class="booking-list" id="bookingList"></div>
+        </div>
+        <div class="panel">
+          <h3>Pre-trip action checklist</h3>
+          <div class="checklist-list" id="bookingChecklist"></div>
+        </div>
+      </div>
+      <div class="privacy-note" style="margin-top:18px">Private booking identifiers, surnames, seat numbers and personalized manage-booking links are intentionally omitted from this website so it can stay safe to host publicly.</div>
+    </section>
+
+    <section class="section" id="packing">
+      <h2>Packing & prep</h2>
+      <p class="section-sub">A practical packing board so the trip site becomes useful right through departure week.</p>
+      <div class="packing-grid" id="packingGrid"></div>
+    </section>
+
+    <section class="section" id="guides">
+      <h2>City guides & quick links</h2>
+      <p class="section-sub">Short, useful reminders for each major stop—what to prioritize, what to eat and the links you’re likely to need.</p>
+      <div class="guide-grid" id="guideGrid"></div>
+    </section>
+
+    <section class="section">
+      <h2>Travel hub</h2>
+      <p class="section-sub">A few grouped resources to help you move from dreaming about the trip to actually managing it.</p>
+      <div class="resource-grid">
+        <div class="resource-card"><small>Transport</small><h4>Train booking & stations</h4><div>Useful for Eurostar, SNCF, Dutch rail and UK rail planning.</div><div class="resource-links"><a href="https://www.eurostar.com/us-en" target="_blank" rel="noopener">Eurostar</a><a href="https://www.sncf-connect.com/en-en/" target="_blank" rel="noopener">SNCF</a><a href="https://www.nsinternational.com/en" target="_blank" rel="noopener">NS International</a><a href="https://www.lner.co.uk/" target="_blank" rel="noopener">LNER</a></div></div>
+        <div class="resource-card"><small>Attractions</small><h4>Major attraction tickets</h4><div>Useful for avoiding long queues and locking in timing-sensitive visits.</div><div class="resource-links"><a href="https://ticket.toureiffel.paris/en" target="_blank" rel="noopener">Eiffel</a><a href="https://www.louvre.fr/en" target="_blank" rel="noopener">Louvre</a><a href="https://www.annefrank.org/en/museum/tickets/" target="_blank" rel="noopener">Anne Frank</a><a href="https://en.chateauversailles.fr/" target="_blank" rel="noopener">Versailles</a></div></div>
+        <div class="resource-card"><small>Airports & local transit</small><h4>Arrival and city movement</h4><div>Helpful for checking airport information and getting around once you land.</div><div class="resource-links"><a href="https://www.schiphol.nl/en/" target="_blank" rel="noopener">Schiphol</a><a href="https://www.heathrow.com/" target="_blank" rel="noopener">Heathrow</a><a href="https://tfl.gov.uk/" target="_blank" rel="noopener">TfL</a><a href="https://www.ratp.fr/en" target="_blank" rel="noopener">Paris Metro</a></div></div>
+      </div>
+    </section>
+
+    <section class="section" id="notes">
+      <h2>Master trip notes</h2>
+      <p class="section-sub">Keep general reminders here—restaurants to try, loose ideas, packing reminders, budget notes or anything else you want easy to find.</p>
+      <textarea class="notes-area" id="masterNotes" placeholder="Add broad trip notes here…"></textarea>
+      <p class="tiny">These notes are stored in this browser using local storage.</p>
+    </section>
+  </main>
+
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-hero"><img id="modalImage" alt="Destination photo" /><button class="modal-close" id="closeModalBtn" aria-label="Close">×</button></div>
+      <div class="modal-body">
+        <div class="modal-header"><small id="modalDay"></small><h3 id="modalTitle"></h3><div class="modal-sub" id="modalSub"></div><div id="modalAlert"></div><div class="day-links" id="modalLinks"></div></div>
+        <div class="modal-layout">
+          <div>
+            <div class="panel">
+              <h3>Daily tasks <span id="taskCount" class="tiny"></span></h3>
+              <div class="task-list" id="taskList"></div>
+              <div class="task-add"><input id="newTaskInput" placeholder="Add your own reminder for this day" /><button id="addTaskBtn">Add</button></div>
+            </div>
+          </div>
+          <div class="modal-side">
+            <div class="panel">
+              <h3>Notes for this day</h3>
+              <textarea class="notes-area" id="dayNotes" style="min-height:220px" placeholder="Restaurants, ideas, backup plans, what to wear, ticket reminders…"></textarea>
+              <p class="tiny">Saved only in this browser.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">Built as a richer, image-led one-stop vacation planner. Last updated automatically from GitHub + Render.</footer>
+
+  <script>
+    const TRIP = [{"date": "2026-11-21", "label": "Fri, Nov 21", "day": "Day 1", "city": "Toronto → Amsterdam", "title": "Outbound flight", "short": "Departs 21:45 · Overnight travel", "status": "booked", "photo": "amsterdam", "travel": "Outbound flight booked. Keep passports, visas, baggage allowances and travel insurance handy before departure.", "items": [["Before departure", "Check passports, visas, travel insurance and baggage allowances"], ["Airport", "Arrive early for international check-in"], ["21:45", "Depart Toronto Pearson for Amsterdam"]], "links": [["Toronto Pearson", "https://www.torontopearson.com/en"], ["Schiphol Airport", "https://www.schiphol.nl/en/"]]}, {"date": "2026-11-22", "label": "Sat, Nov 22", "day": "Day 2", "city": "Amsterdam", "title": "Arrival + old town ease-in", "short": "Arrive 14:05 · Canals · Dam Square", "status": "booked", "photo": "amsterdam", "travel": "Flight arrival is confirmed for 14:05. Keep the first evening flexible so you can settle in comfortably.", "items": [["14:05", "Land in Amsterdam"], ["Late afternoon", "Airport transfer, hotel check-in and a short rest"], ["Early evening", "Walk through Dam Square and the historic canal ring"], ["Dinner", "Eat in central Amsterdam and keep the pace easy"]], "links": [["I Amsterdam", "https://www.iamsterdam.com/en"]]}, {"date": "2026-11-23", "label": "Sun, Nov 23", "day": "Day 3", "city": "Amsterdam", "title": "Museum & canal day", "short": "Rijksmuseum · De Pijp · Jordaan", "status": "planned", "photo": "amsterdam", "travel": "This day is activity-heavy, so pick your museum priorities early and reserve timed-entry tickets where needed.", "items": [["Morning", "Rijksmuseum"], ["Late morning / afternoon", "Van Gogh Museum or Anne Frank House if tickets are available"], ["Afternoon", "Explore De Pijp, Albert Cuyp Market and Jordaan / Nine Streets"], ["Evening", "Canal cruise and Dutch-Indonesian rijsttafel dinner"]], "links": [["Rijksmuseum", "https://www.rijksmuseum.nl/en"], ["Anne Frank House", "https://www.annefrank.org/en/museum/tickets/"]]}, {"date": "2026-11-24", "label": "Mon, Nov 24", "day": "Day 4", "city": "Antwerp", "title": "Optional Belgium day trip", "short": "Train day trip from Amsterdam", "status": "pending", "photo": "antwerp", "travel": "This day trip is still optional. Train timing and price should be checked before locking it in.", "items": [["Morning", "Train Amsterdam ↔ Antwerp (not booked yet)"], ["Morning", "See Antwerp Central Station and the cathedral"], ["Afternoon", "Grote Markt, old-town walks, Belgian food and chocolate"], ["Evening", "Return to Amsterdam for the night"]], "links": [["NS International", "https://www.nsinternational.com/en"]]}, {"date": "2026-11-25", "label": "Tue, Nov 25", "day": "Day 5", "city": "Amsterdam → Paris", "title": "Move to Paris", "short": "Eurostar 18:10–21:41", "status": "booked", "photo": "paris", "travel": "Amsterdam to Paris Eurostar is booked. Build in time for bags, station arrival and hotel transfer on arrival.", "items": [["Morning", "Breakfast and a final walk around Nine Streets / Jordaan"], ["Afternoon", "Collect bags and head to Amsterdam Centraal in good time"], ["18:10", "Depart Amsterdam Centraal on Eurostar"], ["21:41", "Arrive Paris Gare du Nord, then go to the hotel"]], "links": [["Eurostar", "https://www.eurostar.com/us-en"]]}, {"date": "2026-11-26", "label": "Wed, Nov 26", "day": "Day 6", "city": "Paris", "title": "Classic Paris icons", "short": "Eiffel Tower · Arc de Triomphe · Seine", "status": "planned", "photo": "paris", "travel": "Good first full Paris day. Book Eiffel tickets in advance if you want a timed visit.", "items": [["Morning", "Trocadéro views and Eiffel Tower"], ["Afternoon", "Champs-Élysées, Arc de Triomphe and cafés"], ["Evening", "Seine river cruise and dinner by the river"]], "links": [["Eiffel Tower tickets", "https://ticket.toureiffel.paris/en"]]}, {"date": "2026-11-27", "label": "Thu, Nov 27", "day": "Day 7", "city": "Paris", "title": "Art & Montmartre", "short": "Louvre · Tuileries · Sacré-Cœur", "status": "planned", "photo": "paris", "travel": "If you do the Louvre, give it real time. Keep the evening light and scenic in Montmartre.", "items": [["Morning", "Louvre Museum"], ["Afternoon", "Tuileries Garden and lunch, then Montmartre"], ["Evening", "Sacré-Cœur sunset and dinner nearby"]], "links": [["Louvre", "https://www.louvre.fr/en"]]}, {"date": "2026-11-28", "label": "Fri, Nov 28", "day": "Day 8", "city": "Paris", "title": "Shopping & Le Marais", "short": "Palais Garnier · Galeries Lafayette", "status": "planned", "photo": "paris", "travel": "A lighter but stylish Paris day with room for browsing, photos and food stops.", "items": [["Morning", "Tour Palais Garnier if open"], ["Afternoon", "Galeries Lafayette rooftop, shopping and Paris food stops"], ["Late afternoon", "Le Marais boutiques, Place des Vosges and cafés"], ["Evening", "Optional wine bar, jazz night or relaxed dinner"]], "links": [["Palais Garnier", "https://www.operadeparis.fr/en/visits/palais-garnier"]]}, {"date": "2026-11-29", "label": "Sat, Nov 29", "day": "Day 9", "city": "Versailles + Paris", "title": "Palace day", "short": "Versailles estate and evening in Paris", "status": "planned", "photo": "versailles", "travel": "Reserve Versailles timed entry if you keep this plan. You can swap it out for a more relaxed Paris museum day if needed.", "items": [["Morning", "Train to the Palace of Versailles"], ["Afternoon", "Palace, gardens and estate as weather permits"], ["Evening", "Return to Paris for dinner"]], "links": [["Versailles official", "https://en.chateauversailles.fr/"]]}, {"date": "2026-11-30", "label": "Sun, Nov 30", "day": "Day 10", "city": "Strasbourg", "title": "Optional Christmas market day trip", "short": "TGV day trip from Paris", "status": "pending", "photo": "strasbourg", "travel": "This day trip still needs train booking. Check exact times and energy level before committing.", "items": [["Early morning", "TGV from Paris to Strasbourg"], ["Late morning", "Strasbourg Cathedral and historic centre"], ["Afternoon", "Petite France and Alsatian food"], ["Evening", "Christmas-market lights and return to Paris"]], "links": [["SNCF Connect", "https://www.sncf-connect.com/en-en/"]]}, {"date": "2026-12-01", "label": "Mon, Dec 1", "day": "Day 11", "city": "Paris → London", "title": "Move to London", "short": "Eurostar 13:09–14:30", "status": "booked", "photo": "london", "travel": "Paris to London Eurostar is booked. Private booking identifiers are intentionally omitted from this website.", "items": [["Late morning", "Arrive Gare du Nord early for border and security"], ["13:09", "Depart Paris Gare du Nord"], ["14:30", "Arrive London St Pancras"], ["Late afternoon", "Hotel check-in and Covent Garden"], ["Evening", "Explore Soho or Chinatown; optional West End show"]], "links": [["Eurostar", "https://www.eurostar.com/us-en"]]}, {"date": "2026-12-02", "label": "Tue, Dec 2", "day": "Day 12", "city": "London", "title": "Westminster day", "short": "Big Ben · Buckingham Palace · South Bank", "status": "planned", "photo": "london", "travel": "A classic London orientation day with the major central landmarks close together.", "items": [["Morning", "Westminster Abbey, Big Ben and the Houses of Parliament"], ["Afternoon", "Walk through St James’s Park to Buckingham Palace"], ["Evening", "London Eye or a South Bank riverside walk"]], "links": [["Visit London", "https://www.visitlondon.com/"]]}, {"date": "2026-12-03", "label": "Wed, Dec 3", "day": "Day 13", "city": "London", "title": "Markets & views", "short": "Tower of London · Borough Market · Sky Garden", "status": "planned", "photo": "london", "travel": "Book free Sky Garden entry ahead of time if slots open up.", "items": [["Morning", "Tower of London and Tower Bridge"], ["Afternoon", "Borough Market and the South Bank"], ["Late afternoon", "Sky Garden"], ["Evening", "Regent Street lights or a West End performance"]], "links": [["Sky Garden", "https://skygarden.london/"]]}, {"date": "2026-12-04", "label": "Thu, Dec 4", "day": "Day 14", "city": "London → Newcastle", "title": "Head north", "short": "Morning train · Quayside", "status": "pending", "photo": "newcastle", "travel": "This London to Newcastle train is still to be booked. Compare LNER and Lumo before choosing.", "items": [["Morning", "Direct train from London King’s Cross to Newcastle"], ["Afternoon", "Hotel check-in, Quayside and Millennium Bridge"], ["Evening", "Dinner in Newcastle and city-centre walk"]], "links": [["LNER", "https://www.lner.co.uk/"], ["Lumo", "https://www.lumo.co.uk/"]]}, {"date": "2026-12-05", "label": "Fri, Dec 5", "day": "Day 15", "city": "Newcastle → London", "title": "Return south", "short": "More Newcastle · evening train", "status": "pending", "photo": "newcastle", "travel": "The evening return train still needs booking. Keep the next day’s Heathrow departure in mind.", "items": [["Morning", "Relaxed breakfast and more Newcastle sightseeing"], ["Afternoon", "Optional Tynemouth coast if time and weather allow"], ["Evening", "Direct train back to London and overnight near Heathrow if convenient"]], "links": [["LNER", "https://www.lner.co.uk/"], ["Lumo", "https://www.lumo.co.uk/"]]}, {"date": "2026-12-06", "label": "Sat, Dec 6", "day": "Day 16", "city": "London → Toronto", "title": "Journey home", "short": "Flight 11:45–19:15", "status": "booked", "photo": "london", "travel": "Return flight is booked. The exact airline confirmation remains private and is not shown on this public page.", "items": [["Early morning", "Transfer to Heathrow with plenty of time"], ["11:45", "Depart London Heathrow"], ["19:15", "Arrive Toronto Pearson"]], "links": [["Heathrow Airport", "https://www.heathrow.com/"], ["Toronto Pearson", "https://www.torontopearson.com/en"]]}];
+    const CITY_GUIDES = [{"key": "amsterdam", "name": "Amsterdam", "nights": "3 nights", "blurb": "Canals, compact neighbourhoods, museums and relaxed evenings.", "highlights": ["Canal ring walk", "Rijksmuseum", "Jordaan + Nine Streets", "De Pijp"], "food": ["Stroopwafels", "Dutch fries", "Rijsttafel", "Canal-side cafés"], "gettingAround": "Best explored on foot, by tram or short metro rides.", "links": [["I Amsterdam", "https://www.iamsterdam.com/en"], ["GVB transit", "https://www.gvb.nl/en"]]}, {"key": "paris", "name": "Paris", "nights": "6 nights", "blurb": "Iconic monuments, art, shopping streets and classic café life.", "highlights": ["Eiffel Tower", "Louvre", "Montmartre", "Le Marais"], "food": ["Croissants", "Crêpes", "Bistro dinners", "Hot chocolate"], "gettingAround": "Use the Metro for speed, and walk for atmosphere once in a neighbourhood.", "links": [["Paris tourism", "https://parisjetaime.com/eng/"], ["RATP transit", "https://www.ratp.fr/en"]]}, {"key": "london", "name": "London", "nights": "4 nights", "blurb": "Historic landmarks, markets, festive lights and great theatre options.", "highlights": ["Westminster", "South Bank", "Tower Bridge", "Borough Market"], "food": ["Pub lunch", "Borough Market bites", "Afternoon tea", "West End dinner"], "gettingAround": "Tap-in transit makes Tube and buses the easiest option for most moves.", "links": [["Visit London", "https://www.visitlondon.com/"], ["TfL transit", "https://tfl.gov.uk/"]]}, {"key": "newcastle", "name": "Newcastle", "nights": "1 night", "blurb": "Short but memorable stop for the Quayside, bridges and northern charm.", "highlights": ["Quayside", "Millennium Bridge", "City centre", "Optional Tynemouth"], "food": ["Cosy dinner", "Coffee spots", "Seaside snack if heading to Tynemouth"], "gettingAround": "Compact centre; walking works well, with rail for arrival/departure.", "links": [["Visit Newcastle", "https://newcastlegateshead.com/"], ["LNER", "https://www.lner.co.uk/"]]}];
+    const BOOKINGS = [["Nov 21–22", "Toronto → Amsterdam flight", "21:45 departure · 14:05 arrival", "confirmed"], ["Nov 25", "Amsterdam → Paris Eurostar", "18:10–21:41", "confirmed"], ["Dec 1", "Paris → London Eurostar", "13:09–14:30", "confirmed"], ["Dec 6", "London → Toronto flight", "11:45–19:15 · via Amsterdam", "confirmed"], ["Nov 24", "Amsterdam ↔ Antwerp", "Optional day-trip trains, 2 adults", "pending"], ["Nov 30", "Paris ↔ Strasbourg", "TGV day-trip trains, 2 adults", "pending"], ["Dec 4", "London → Newcastle", "Morning LNER/Lumo, 2 adults", "pending"], ["Dec 5", "Newcastle → London", "Evening LNER/Lumo, 2 adults", "pending"]];
+    const BOOKING_TASKS = ["Book accommodation: Amsterdam (3 nights)", "Book accommodation: Paris (6 nights)", "Book accommodation: London (3 nights Dec 1–4)", "Book accommodation: Newcastle (1 night)", "Book accommodation: London (1 night Dec 5)", "Book Antwerp return train if keeping the day trip", "Book Strasbourg return TGV", "Book London → Newcastle train", "Book Newcastle → London evening train", "Complete Eurostar passenger details privately", "Check visas, UK entry and border documentation", "Book major attractions: Anne Frank, Louvre, Eiffel, Versailles", "Consider travel insurance and baggage allowances"];
+    const PACKING = {"Travel essentials": ["Passports", "Visas / entry docs", "Travel insurance docs", "Payment cards", "Phone + charger", "Power bank", "Universal adapter"], "Clothing": ["Warm coat", "Walking shoes", "Sweaters / layers", "Evening outfit", "Sleepwear", "Socks / underwear", "Rain-friendly layer"], "Toiletries": ["Toothbrush + paste", "Skincare", "Medications", "Mini laundry items", "Deodorant", "Makeup / grooming kit"], "Trip extras": ["Reusable water bottle", "Umbrella", "Camera / tripod", "Day bag", "Snacks for train / flight", "Printed backups of key documents"]};
+    const ROUTE = ["Toronto", "Amsterdam", "Antwerp (optional)", "Paris", "Strasbourg (optional)", "London", "Newcastle", "Toronto"];
+    const PHOTOS = {"hero": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=80", "amsterdam": "https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?auto=format&fit=crop&w=1200&q=80", "antwerp": "https://images.unsplash.com/photo-1565689478170-e04f6a68706f?auto=format&fit=crop&w=1200&q=80", "paris": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1200&q=80", "versailles": "https://images.unsplash.com/photo-1624526267942-ab0ff8a0b151?auto=format&fit=crop&w=1200&q=80", "strasbourg": "https://images.unsplash.com/photo-1570204234904-f5f2f97b89cc?auto=format&fit=crop&w=1200&q=80", "london": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1200&q=80", "newcastle": "https://images.unsplash.com/photo-1595590424283-b8f17842773f?auto=format&fit=crop&w=1200&q=80"};
+
+    const storageKey = 'europe-vacation-hub-v2';
+    let state = {taskDone: {}, customTasks: {}, bookingDone: {}, packingDone: {}, dayNotes: {}, masterNotes: ''};
+    try { state = Object.assign(state, JSON.parse(localStorage.getItem(storageKey) || '{}')); } catch (e) {}
+    const save = () => localStorage.setItem(storageKey, JSON.stringify(state));
+    const safe = (s) => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+    function getTasks(day) { return day.items.concat((state.customTasks[day.date] || []).map(t => ['Added by you', t])); }
+
+    function updateTopStats() {
+      const booked = BOOKINGS.filter(b => b[3] === 'confirmed').length;
+      const pending = BOOKINGS.filter(b => b[3] === 'pending').length;
+      document.getElementById('heroBooked').textContent = booked;
+      document.getElementById('heroPending').textContent = pending;
+      document.getElementById('statBooked').textContent = booked;
+      document.getElementById('statPending').textContent = pending;
+
+      let total = 0, done = 0;
+      TRIP.forEach(day => {
+        getTasks(day).forEach((_, idx) => {
+          total += 1;
+          if (state.taskDone[`${day.date}-${idx}`]) done += 1;
+        });
+      });
+      const percent = total ? Math.round(done / total * 100) : 0;
+      document.getElementById('progressCount').textContent = `${percent}%`;
+      document.getElementById('progressSub').textContent = `${done} of ${total} day-level items completed.`;
+    }
+
+    function renderRoute() {
+      const root = document.getElementById('routeChips');
+      root.innerHTML = '';
+      ROUTE.forEach((stop, i) => {
+        const chip = document.createElement('span'); chip.className='chip'; chip.textContent = stop; root.appendChild(chip);
+        if (i < ROUTE.length - 1) { const arrow = document.createElement('span'); arrow.className='route-arrow'; arrow.textContent='→'; root.appendChild(arrow); }
+      });
+    }
+
+    function renderCountdown() {
+      const start = new Date('2026-11-21T21:45:00');
+      const now = new Date();
+      const ms = start - now;
+      const el = document.getElementById('countdownText');
+      const sub = document.getElementById('countdownSub');
+      if (ms <= 0) { el.textContent = 'Trip time ✈'; sub.textContent = 'Your travel window has begun or passed.'; return; }
+      const days = Math.floor(ms / 86400000);
+      const hours = Math.floor((ms % 86400000) / 3600000);
+      el.textContent = `${days} days, ${hours} hours`;
+      sub.textContent = 'Until departure from Toronto on the first flight.';
+    }
+
+    function renderCities() {
+      const root = document.getElementById('cityGrid');
+      root.innerHTML = CITY_GUIDES.map(city => `
+        <article class="city-card">
+          <img src="${PHOTOS[city.key]}" alt="${city.name} travel photo" loading="lazy" />
+          <div class="content">
+            <h3>${city.name}</h3>
+            <span class="tagline">${city.nights}</span>
+            <p class="blurb">${city.blurb}</p>
+            <div class="bullets">${city.highlights.map(x => `<span>${safe(x)}</span>`).join('')}</div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function renderItinerary(filter='all') {
+      const root = document.getElementById('timelineGrid');
+      const shown = filter === 'all' ? TRIP : TRIP.filter(day => day.status === filter);
+      root.innerHTML = shown.map(day => `
+        <article class="day-card">
+          <div class="image-wrap">
+            <img src="${PHOTOS[day.photo] || PHOTOS.paris}" alt="${day.city} photo" loading="lazy" />
+            <span class="status-badge ${day.status}">${safe(day.status)}</span>
+          </div>
+          <div class="body">
+            <div class="day-meta">
+              <div>
+                <small>${safe(day.day)} · ${safe(day.label)}</small>
+                <h3>${safe(day.title)}</h3>
+              </div>
+            </div>
+            <div class="day-city">${safe(day.city)}</div>
+            <div class="day-desc">${safe(day.short)}</div>
+            <div class="day-actions">
+              <a class="inline-link" href="#" onclick="openDay('${day.date}');return false;">Preview details</a>
+              <button class="open-btn" onclick="openDay('${day.date}')">Open day</button>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function renderBookings() {
+      document.getElementById('bookingList').innerHTML = BOOKINGS.map(item => `
+        <div class="booking-item">
+          <div>
+            <small>${safe(item[0])}</small>
+            <h4>${safe(item[1])}</h4>
+            <small>${safe(item[2])}</small>
+          </div>
+          <span class="status-pill ${item[3]}">${item[3] === 'confirmed' ? 'Booked' : 'Pending'}</span>
+        </div>
+      `).join('');
+      const root = document.getElementById('bookingChecklist');
+      root.innerHTML = BOOKING_TASKS.map((item, idx) => `
+        <div class="check-item">
+          <label><input type="checkbox" data-booking="${idx}" ${state.bookingDone[idx] ? 'checked' : ''} /><span>${safe(item)}</span></label>
+        </div>
+      `).join('');
+      root.querySelectorAll('input').forEach(input => input.onchange = () => { state.bookingDone[input.dataset.booking] = input.checked; save(); });
+    }
+
+    function renderPacking() {
+      const root = document.getElementById('packingGrid');
+      root.innerHTML = Object.entries(PACKING).map(([category, items], groupIdx) => `
+        <div class="packing-panel">
+          <h4>${safe(category)}</h4>
+          ${items.map((item, idx) => `
+            <label><input type="checkbox" data-pack="${groupIdx}-${idx}" ${state.packingDone[`${groupIdx}-${idx}`] ? 'checked' : ''} /><span>${safe(item)}</span></label>
+          `).join('')}
+        </div>
+      `).join('');
+      root.querySelectorAll('input').forEach(input => input.onchange = () => { state.packingDone[input.dataset.pack] = input.checked; save(); });
+    }
+
+    function renderGuides() {
+      const root = document.getElementById('guideGrid');
+      root.innerHTML = CITY_GUIDES.map(city => `
+        <article class="guide-card">
+          <img src="${PHOTOS[city.key] || PHOTOS.paris}" alt="${city.name} guide image" loading="lazy" />
+          <div class="guide-content">
+            <div class="guide-meta"><h3>${safe(city.name)}</h3><span class="tagline">${safe(city.nights)}</span></div>
+            <p>${safe(city.blurb)}<br><span class="tiny">${safe(city.gettingAround)}</span></p>
+            <div class="guide-columns">
+              <div><strong>Highlights</strong><ul>${city.highlights.map(x => `<li>${safe(x)}</li>`).join('')}</ul></div>
+              <div><strong>Food / vibe</strong><ul>${city.food.map(x => `<li>${safe(x)}</li>`).join('')}</ul></div>
+            </div>
+            <div class="guide-links">${city.links.map(([label, url]) => `<a href="${url}" target="_blank" rel="noopener">${safe(label)}</a>`).join('')}</div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    let activeDate = null;
+    function openDay(date) {
+      activeDate = date;
+      const day = TRIP.find(d => d.date === date);
+      if (!day) return;
+      document.getElementById('modalImage').src = PHOTOS[day.photo] || PHOTOS.paris;
+      document.getElementById('modalDay').textContent = `${day.day} · ${day.label}`;
+      document.getElementById('modalTitle').textContent = day.title;
+      document.getElementById('modalSub').textContent = `${day.city} · ${day.short}`;
+      document.getElementById('modalAlert').innerHTML = day.travel ? `<div class="alert">${safe(day.travel)}</div>` : '';
+      document.getElementById('modalLinks').innerHTML = (day.links || []).map(([label, url]) => `<a href="${url}" target="_blank" rel="noopener">${safe(label)} ↗</a>`).join('');
+      document.getElementById('dayNotes').value = state.dayNotes[date] || '';
+      document.getElementById('newTaskInput').value = '';
+      renderTaskList();
+      document.getElementById('modalBackdrop').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function renderTaskList() {
+      const day = TRIP.find(d => d.date === activeDate);
+      if (!day) return;
+      const tasks = getTasks(day);
+      const root = document.getElementById('taskList');
+      let completed = 0;
+      root.innerHTML = tasks.map((task, idx) => {
+        const key = `${day.date}-${idx}`;
+        const checked = !!state.taskDone[key];
+        if (checked) completed += 1;
+        return `
+          <div class="task-item ${checked ? 'done' : ''}">
+            <input type="checkbox" data-task-key="${key}" ${checked ? 'checked' : ''} />
+            <label>${safe(task[1])}<small>${safe(task[0])}</small></label>
+          </div>
+        `;
+      }).join('');
+      document.getElementById('taskCount').textContent = `${completed} / ${tasks.length} done`;
+      root.querySelectorAll('input').forEach(input => input.onchange = () => { state.taskDone[input.dataset.taskKey] = input.checked; save(); renderTaskList(); updateTopStats(); });
+    }
+
+    function addTaskToDay() {
+      if (!activeDate) return;
+      const input = document.getElementById('newTaskInput');
+      const val = input.value.trim();
+      if (!val) return;
+      state.customTasks[activeDate] = state.customTasks[activeDate] || [];
+      state.customTasks[activeDate].push(val);
+      save();
+      input.value = '';
+      renderTaskList();
+      updateTopStats();
+    }
+
+    function closeModal() {
+      document.getElementById('modalBackdrop').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    function initFilters() {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(x => x.classList.toggle('active', x === btn));
+        renderItinerary(btn.dataset.filter);
+      }));
+    }
+
+    document.getElementById('closeModalBtn').onclick = closeModal;
+    document.getElementById('modalBackdrop').addEventListener('click', e => { if (e.target.id === 'modalBackdrop') closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    document.getElementById('addTaskBtn').onclick = addTaskToDay;
+    document.getElementById('newTaskInput').addEventListener('keydown', e => { if (e.key === 'Enter') addTaskToDay(); });
+    document.getElementById('dayNotes').addEventListener('input', e => { if (activeDate) { state.dayNotes[activeDate] = e.target.value; save(); } });
+    document.getElementById('masterNotes').value = state.masterNotes || '';
+    document.getElementById('masterNotes').addEventListener('input', e => { state.masterNotes = e.target.value; save(); });
+
+    renderCountdown();
+    renderRoute();
+    renderCities();
+    renderItinerary();
+    renderBookings();
+    renderPacking();
+    renderGuides();
+    updateTopStats();
+    initFilters();
+    window.openDay = openDay;
+  </script>
+</body>
+</html>
