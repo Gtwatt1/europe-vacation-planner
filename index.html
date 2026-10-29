@@ -37,9 +37,9 @@
 .transport-flags{font-size:19px;line-height:1.3;letter-spacing:.015em;overflow-wrap:anywhere}
 .transport-cities{font-size:11px;line-height:1.3;color:white;font-weight:850;overflow-wrap:anywhere}
 .transport-time{font-size:9px;line-height:1.35;color:#d9f4e8}
-.country-flag{font-size:18px;vertical-align:middle;margin-left:4px;text-shadow:none}
-@media(max-width:680px){.cell.trip.transport-day{gap:3px;padding:4px}.transport-mode{font-size:8px;padding:3px 4px}.transport-flags{font-size:12px}.transport-cities{font-size:9px}.transport-time{display:none}.country-flag{font-size:13px;margin-left:0}}
-</style></head>
+.country-flag{font-size:12px;vertical-align:middle;margin-left:4px;text-shadow:none}
+@media(max-width:680px){.cell.trip.transport-day{gap:3px;padding:4px}.transport-mode{font-size:8px;padding:3px 4px}.transport-flags{font-size:12px}.transport-cities{font-size:9px}.transport-time{display:none}.country-flag{font-size:10px;margin-left:0}}
+ .transport-destination{font-size:14px;font-weight:850;color:white;line-height:1.25;overflow-wrap:anywhere}@media(max-width:680px){.transport-destination{font-size:11px}} </style></head>
 <body><header class="hero"><div class="hero-inner"><div class="eyebrow">Our winter escape · 2026</div><h1>Our European escape.</h1><p>Tap any day to explore the full itinerary, timings, helpful links and notes.</p><div class="hero-meta"><span>21 Nov – 6 Dec 2026</span><span>Amsterdam · Paris · London · Newcastle</span></div></div></header>
 <main class="shell"><section id="calendar-view"><div class="section-head"><h2>November → December 2026</h2><p>Tap any date to see the plan for the day</p></div><div class="calendar"><div id="whole-trip" class="days"></div></div><p class="footnote">Times are local to each destination. Tap a date to view activities and add notes.</p></section></main>
 <footer class="foot">Tap a day for details · Saved notes stay on this device.</footer>
@@ -86,15 +86,15 @@ const checkTasks=['Book accommodation: Amsterdam (3 nights)','Book accommodation
 let state={};try{state=JSON.parse(localStorage.getItem('europe-escape-v1')||'{}')}catch(e){};state.done??={};state.extra??={};state.notes??={};state.bookingDone??={};const save=()=>{try{localStorage.setItem('europe-escape-v1',JSON.stringify(state))}catch(e){}};
 const weekday=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];const dateFmt=(key)=>new Date(key+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});
 const travelCalendar={
-"2026-11-21":{mode:"✈️ Flight",from:"🇨🇦 Toronto",to:"🇳🇱 Amsterdam",route:"🇨🇦 → 🇳🇱"},
-"2026-11-22":{mode:"✈️ Arrival",from:"🇨🇦 Toronto",to:"🇳🇱 Amsterdam",route:"🇨🇦 → 🇳🇱"},
-"2026-11-24":{mode:"🚆 Day trip",from:"🇳🇱 Amsterdam",to:"🇧🇪 Antwerp",route:"🇳🇱 ⇄ 🇧🇪"},
-"2026-11-25":{mode:"🚆 Eurostar",from:"🇳🇱 Amsterdam",to:"🇫🇷 Paris",route:"🇳🇱 → 🇫🇷"},
-"2026-11-30":{mode:"🚆 Day trip",from:"🇫🇷 Paris",to:"🇫🇷 Strasbourg",route:"🇫🇷 Paris ⇄ Strasbourg"},
-"2026-12-01":{mode:"🚆 Eurostar",from:"🇫🇷 Paris",to:"🇬🇧 London",route:"🇫🇷 → 🇬🇧"},
-"2026-12-04":{mode:"🚆 Train",from:"🇬🇧 London",to:"🇬🇧 Newcastle",route:"🇬🇧 London → Newcastle"},
-"2026-12-05":{mode:"🚆 Train",from:"🇬🇧 Newcastle",to:"🇬🇧 London",route:"🇬🇧 Newcastle → London"},
-"2026-12-06":{mode:"✈️ Flight",from:"🇬🇧 London",to:"🇨🇦 Toronto",route:"🇬🇧 → 🇨🇦"}
+"2026-11-21":{mode:"✈️ Flight",destination:"Amsterdam"},
+"2026-11-22":{mode:"✈️ Arrival",destination:"Amsterdam"},
+"2026-11-24":{mode:"🚆 Train",destination:"Antwerp · return"},
+"2026-11-25":{mode:"🚆 Eurostar",destination:"Paris"},
+"2026-11-30":{mode:"🚆 Train",destination:"Strasbourg · return"},
+"2026-12-01":{mode:"🚆 Eurostar",destination:"London"},
+"2026-12-04":{mode:"🚆 Train",destination:"Newcastle"},
+"2026-12-05":{mode:"🚆 Train",destination:"London"},
+"2026-12-06":{mode:"✈️ Flight",destination:"Toronto"}
 };
 function dayFlag(key,city){if(/Antwerp/i.test(city))return "🇧🇪";if(/Amsterdam/i.test(city))return "🇳🇱";if(/Paris|Strasbourg|Versailles/i.test(city))return "🇫🇷";if(/London|Newcastle/i.test(city))return "🇬🇧";return "🇨🇦"}
 function drawWholeCalendar(){
@@ -107,10 +107,10 @@ function drawWholeCalendar(){
   btn.className='cell trip'+(travel?' transport-day':'');
   btn.style.backgroundImage='linear-gradient(135deg,#163c4b,#4d766d)';
   btn.title='Open '+dateFmt(key);
-  btn.setAttribute('aria-label','Open '+dateFmt(key)+' '+day.city+(travel?' '+travel.mode+' '+travel.from+' to '+travel.to:''));
+  btn.setAttribute('aria-label','Open '+dateFmt(key)+' '+day.city+(travel?' '+travel.mode+' to '+travel.destination:''));
   const flag=dayFlag(key,day.city);
   btn.innerHTML=travel
-   ? `<span class="day-num">${date.toLocaleDateString('en-US',{month:'short',day:'numeric'})}</span><span class="transport-mode">${travel.mode}</span><span class="transport-flags">${travel.route}</span><span class="transport-cities">${safe(day.city)}</span><span class="transport-time">${safe(day.desc)}</span>`
+   ? `<span class="day-num">${date.toLocaleDateString('en-US',{month:'short',day:'numeric'})}</span><span class="transport-mode">${travel.mode}</span><span class="transport-destination">${safe(travel.destination)}</span><span class="transport-time">${safe(day.desc)}</span>`
    : `<span class="day-num">${date.toLocaleDateString('en-US',{month:'short',day:'numeric'})} <span class="country-flag" aria-label="Country flag">${flag}</span></span><span class="city">${safe(day.city)}</span><span class="detail">${safe(day.desc)}</span>`;
   btn.onclick=()=>openDay(key);root.appendChild(btn);setAccurateDayPhoto(key,btn,true);
  });
@@ -119,7 +119,7 @@ function drawPlaces(){const a=[['Amsterdam','3 nights','amsterdam'],['Paris','6 
 function drawBookings(){document.getElementById('bookings').innerHTML=bookings.map(([date,title,desc,st])=>`<div class="booking"><div><small>${date}</small><h3>${title}</h3><small>${desc}</small></div><span class="status ${st}">${st==='confirmed'?'✓ Booked':'To book'}</span></div>`).join('');const root=document.getElementById('book-checklist');root.innerHTML='';checkTasks.forEach((s,i)=>{let row=document.createElement('div');row.className='booking';let label=document.createElement('label');label.className='small';let input=document.createElement('input');input.type='checkbox';input.style.marginRight='10px';input.checked=!!state.bookingDone[i];input.onchange=()=>{state.bookingDone[i]=input.checked;save()};label.append(input,document.createTextNode(s));row.append(label);root.append(row)})}
 function drawOverview(){document.getElementById('stays').innerHTML=stays.map(([c,d,n])=>`<div class="booking"><div><small>${d}</small><h3>${c}</h3></div><span class="status">${n}</span></div>`).join('');let total=0,done=0;Object.entries(trip).forEach(([key,day])=>{let arr=day.items.concat((state.extra[key]||[]).map(t=>['Custom',t]));arr.forEach((_,i)=>{total++;if(state.done[key+'-'+i])done++})});document.getElementById('doneTotal').textContent=done;document.getElementById('progressLabel').textContent=`${done} of ${total} activities completed`;document.getElementById('progressFill').style.width=(total?done/total*100:0)+'%'}
 let activeKey=null;const safe=(s)=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-function openDay(key){activeKey=key;const d=trip[key];const img=document.getElementById('modalPhoto');img.removeAttribute('src');img.style.display='block';setAccurateDayPhoto(key,img);document.getElementById('modalPhoto').alt=d.city+' travel photograph';document.getElementById('modalDate').textContent=dateFmt(key);document.getElementById('modalTitle').textContent=(travelCalendar[key]?travelCalendar[key].route+' · ':dayFlag(key,d.city)+' · ')+d.city;document.getElementById('modalSub').textContent=d.desc;document.getElementById('modalAlert').innerHTML='';document.getElementById('modalLinks').innerHTML=(d.links||[]).map(([t,l])=>`<a href="${l}" target="_blank" rel="noopener noreferrer">${safe(t)} ↗</a>`).join('');drawTasks();document.getElementById('backdrop').classList.add('open');document.body.style.overflow='hidden'}
+function openDay(key){activeKey=key;const d=trip[key];const img=document.getElementById('modalPhoto');img.removeAttribute('src');img.style.display='block';setAccurateDayPhoto(key,img);document.getElementById('modalPhoto').alt=d.city+' travel photograph';document.getElementById('modalDate').textContent=dateFmt(key);document.getElementById('modalTitle').textContent=(travelCalendar[key]?'':dayFlag(key,d.city)+' · ')+d.city;document.getElementById('modalSub').textContent=d.desc;document.getElementById('modalAlert').innerHTML='';document.getElementById('modalLinks').innerHTML=(d.links||[]).map(([t,l])=>`<a href="${l}" target="_blank" rel="noopener noreferrer">${safe(t)} ↗</a>`).join('');drawTasks();document.getElementById('backdrop').classList.add('open');document.body.style.overflow='hidden'}
 function drawHighlights(){const day=trip[activeKey],pics=activityPhotos[activeKey]||[dayPhotos[activeKey]];const highlights=day.items.filter(([time])=>!(/airport|before departure/i).test(time)).slice(0,3);document.getElementById('dayHighlights').innerHTML=highlights.map(([time,label],i)=>`<figure class="day-highlight"><img loading="lazy" src="${pics[i%pics.length]}" alt="Travel inspiration for ${safe(label)}" onerror="this.onerror=null;this.src=dayPhotos['${activeKey}']"><figcaption>${safe(time)} · ${safe(label).slice(0,55)}</figcaption></figure>`).join('')}
 
 const landmarkImageTitles=[
